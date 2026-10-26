@@ -25,6 +25,10 @@
 <style>
 body{margin:0;background:#fff;font-family:var(--font-sans);color:#1A1A1A}
 a{color:#034592;text-decoration:none}a:hover{color:#122F66;text-decoration:underline}
+/* FooterWeb from the design system is a fixed 1440px frame: paint its band blue edge to edge and centre the frame on wider screens */
+.so-footer .sc-host-x>div{max-width:none!important}
+.so-footer .sc-host-x>div>div{background:var(--core-blue-variable,#034592)}
+.so-footer .sc-host-x>div>div>div{left:50%!important;margin-left:-720px!important}
 </style>
 </helmet>
 <sc-if value="{{ proto.show }}" hint-placeholder-val="{{ false }}">
@@ -193,7 +197,7 @@ a{color:#034592;text-decoration:none}a:hover{color:#122F66;text-decoration:under
 </div>
 </div>
 </div>
-<div style="margin-top:64px"><div style="position:relative;background:#fff">
+<div style="margin-top:64px"><div class="so-footer" style="position:relative;background:#fff">
 <div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
 <x-import component-from-global-scope="DesignSystem_e25ee1.FooterWeb" device="desktop" open="n/a" dc-props="{{ wFull }}" hint-size="100%,680px"></x-import>
 </div></div>
@@ -275,7 +279,7 @@ a{color:#034592;text-decoration:none}a:hover{color:#122F66;text-decoration:under
 </sc-for>
 </div>
 </div>
-<div style="margin-top:64px"><div style="position:relative;background:#fff">
+<div style="margin-top:64px"><div class="so-footer" style="position:relative;background:#fff">
 <div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
 <x-import component-from-global-scope="DesignSystem_e25ee1.FooterWeb" device="desktop" open="n/a" dc-props="{{ wFull }}" hint-size="100%,680px"></x-import>
 </div></div>
@@ -443,7 +447,7 @@ a{color:#034592;text-decoration:none}a:hover{color:#122F66;text-decoration:under
 </div>
 </div>
 </div>
-<div style="margin-top:64px"><div style="position:relative;background:#fff">
+<div style="margin-top:64px"><div class="so-footer" style="position:relative;background:#fff">
 <div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
 <x-import component-from-global-scope="DesignSystem_e25ee1.FooterWeb" device="desktop" open="n/a" dc-props="{{ wFull }}" hint-size="100%,680px"></x-import>
 </div></div>
@@ -538,7 +542,7 @@ a{color:#034592;text-decoration:none}a:hover{color:#122F66;text-decoration:under
 </sc-for>
 </div>
 </div>
-<div style="margin-top:64px"><div style="position:relative;background:#fff">
+<div style="margin-top:64px"><div class="so-footer" style="position:relative;background:#fff">
 <div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
 <x-import component-from-global-scope="DesignSystem_e25ee1.FooterWeb" device="desktop" open="n/a" dc-props="{{ wFull }}" hint-size="100%,680px"></x-import>
 </div></div>
@@ -671,7 +675,7 @@ a{color:#034592;text-decoration:none}a:hover{color:#122F66;text-decoration:under
 </div>
 </div>
 </div>
-<div style="margin-top:64px"><div style="position:relative;background:#fff">
+<div style="margin-top:64px"><div class="so-footer" style="position:relative;background:#fff">
 <div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
 <x-import component-from-global-scope="DesignSystem_e25ee1.FooterWeb" device="desktop" open="n/a" dc-props="{{ wFull }}" hint-size="100%,680px"></x-import>
 </div></div>
@@ -776,7 +780,7 @@ a{color:#034592;text-decoration:none}a:hover{color:#122F66;text-decoration:under
 </div>
 </div>
 </section>
-<div style="position:relative;background:#fff">
+<div class="so-footer" style="position:relative;background:#fff">
 <div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
 <x-import component-from-global-scope="DesignSystem_e25ee1.FooterWeb" device="desktop" open="n/a" dc-props="{{ wFull }}" hint-size="100%,680px"></x-import>
 </div>
@@ -882,12 +886,9 @@ a{color:#034592;text-decoration:none}a:hover{color:#122F66;text-decoration:under
 </div>
 </div>
 
-<div style="position:relative;background:#fff">
-<div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
-<div style="position:relative;background:#fff">
+<div class="so-footer" style="position:relative;background:#fff">
 <div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
 <x-import component-from-global-scope="DesignSystem_e25ee1.FooterWeb" device="desktop" open="n/a" dc-props="{{ wFull }}" hint-size="100%,680px"></x-import>
-</div>
 </div>
 
 </div>
@@ -1031,7 +1032,7 @@ a{color:#034592;text-decoration:none}a:hover{color:#122F66;text-decoration:under
 <x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="flat" size="lg" text="All variants" href="#/" hint-size="auto,48px"></x-import>
 </div>
 </div>
-<div style="position:relative;background:#fff">
+<div class="so-footer" style="position:relative;background:#fff">
 <div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
 <x-import component-from-global-scope="DesignSystem_e25ee1.FooterWeb" device="desktop" open="n/a" dc-props="{{ wFull }}" hint-size="100%,680px"></x-import>
 </div>
