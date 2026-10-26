@@ -1,0 +1,12 @@
+/* Stena Sans is the only typeface in the source file (Regular 400, Medium 500, Bold 700, plus a "Display" cut used at 28–40px).
+   The .fig does not embed the font binaries. Drop the licensed files into assets/fonts/ and uncomment the rules below —
+   the whole system (tokens + components) already points at "Stena Sans" first. Until then Figtree (Google Fonts) stands in:
+   similar humanist proportions, double-storey a, open counters. */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+/*
+@font-face { font-family: "Stena Sans"; font-weight: 400; font-style: normal; src: url('../assets/fonts/StenaSans-Regular.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: "Stena Sans"; font-weight: 500; font-style: normal; src: url('../assets/fonts/StenaSans-Medium.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: "Stena Sans"; font-weight: 700; font-style: normal; src: url('../assets/fonts/StenaSans-Bold.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: "Stena Sans Display"; font-weight: 700; font-style: normal; src: url('../assets/fonts/StenaSansDisplay-Bold.woff2') format('woff2'); font-display: swap; }
+*/

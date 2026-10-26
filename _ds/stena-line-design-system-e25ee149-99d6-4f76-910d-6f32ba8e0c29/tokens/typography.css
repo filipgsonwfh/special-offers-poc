@@ -1,0 +1,42 @@
+/* Type scale as defined by the Heading (webui) and Text (webui) component sets, plus the page-level sizes seen in the screens. */
+:root {
+  --font-sans: "Stena Sans", "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Stena Sans Display", "Stena Sans", "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* headings — Heading (webui), all Medium 500 */
+  --type-h1: 500 28px/42px var(--font-sans);
+  --type-h2: 500 24px/36px var(--font-sans);
+  --type-h3: 500 20px/30px var(--font-sans);
+  --type-h4: 500 18px/27px var(--font-sans);
+  --type-h5: 500 16px/24px var(--font-sans);
+  --type-h6: 500 14px/21px var(--font-sans);
+  /* page-level display sizes used on screens (Bold 700) */
+  --type-page-title: 700 32px/40px var(--font-sans);
+  --type-hero-title: 700 40px/48px var(--font-sans);
+  --type-section-title: 700 24px/32px var(--font-sans);
+
+  /* text — Text (webui) */
+  --type-large: 400 18px/24px var(--font-sans);
+  --type-large-bold: 500 18px/24px var(--font-sans);
+  --type-body: 400 16px/24px var(--font-sans);
+  --type-body-bold: 500 16px/24px var(--font-sans);
+  --type-small: 400 14px/21px var(--font-sans);
+  --type-small-bold: 500 14px/21px var(--font-sans);
+  --type-smaller: 400 12px/18px var(--font-sans);
+  --type-smaller-bold: 500 12px/18px var(--font-sans);
+  --type-caption: italic 400 16px/24px var(--font-sans);
+  --type-overline: 400 16px/24px var(--font-sans); /* + text-transform: uppercase */
+  --type-eyebrow: 700 12px/18px var(--font-sans);  /* + uppercase, letter-spacing 0.5px — the "SHOPPING · Deck 8" labels on cards */
+
+  /* button labels */
+  --type-button-sm: 500 12px/18px var(--font-sans);
+  --type-button-md: 500 16px/24px var(--font-sans);
+  --type-button-lg: 500 18px/24px var(--font-sans);
+  --type-button-larger: 500 20px/30px var(--font-sans);
+}
+body { font: var(--type-body); color: var(--text-primary); -webkit-font-smoothing: antialiased; }
+a { color: var(--text-link); text-decoration: none; }
+a:hover { color: var(--color-blue-hover); text-decoration: underline; }

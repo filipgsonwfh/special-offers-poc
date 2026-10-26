@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Special offers · clickable prototype · Stena Line</title>
+<link rel="icon" type="image/svg+xml" href="assets/logo-stena-line.svg">
+<script src="vendor/react.production.min.js"></script>
+<script src="vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/stena-line-design-system-e25ee149-99d6-4f76-910d-6f32ba8e0c29/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/stena-line-design-system-e25ee149-99d6-4f76-910d-6f32ba8e0c29/tokens/fig-tokens.css">
+<link rel="stylesheet" href="_ds/stena-line-design-system-e25ee149-99d6-4f76-910d-6f32ba8e0c29/tokens/colors.css">
+<link rel="stylesheet" href="_ds/stena-line-design-system-e25ee149-99d6-4f76-910d-6f32ba8e0c29/tokens/typography.css">
+<link rel="stylesheet" href="_ds/stena-line-design-system-e25ee149-99d6-4f76-910d-6f32ba8e0c29/tokens/layout.css">
+<link rel="stylesheet" href="_ds/stena-line-design-system-e25ee149-99d6-4f76-910d-6f32ba8e0c29/components/cards/fig-assets.css">
+<link rel="stylesheet" href="_ds/stena-line-design-system-e25ee149-99d6-4f76-910d-6f32ba8e0c29/components/media/fig-assets.css">
+<link rel="stylesheet" href="_ds/stena-line-design-system-e25ee149-99d6-4f76-910d-6f32ba8e0c29/components/navigation/fig-assets.css">
+<link rel="stylesheet" href="_ds/stena-line-design-system-e25ee149-99d6-4f76-910d-6f32ba8e0c29/styles.css">
+<script src="_ds/stena-line-design-system-e25ee149-99d6-4f76-910d-6f32ba8e0c29/_ds_bundle.js"></script>
+<style>
+body{margin:0;background:#fff;font-family:var(--font-sans);color:#1A1A1A}
+a{color:#034592;text-decoration:none}a:hover{color:#122F66;text-decoration:underline}
+</style>
+</helmet>
+<sc-if value="{{ proto.show }}" hint-placeholder-val="{{ false }}">
+<div style="background:#1A1A1A;color:#fff;height:36px;display:flex;align-items:center;justify-content:center;gap:12px;font:500 13px/20px var(--font-sans)">
+<span style="color:#C9C9C9">Prototype</span><span style="color:#6B6B6B">·</span><span>{{ proto.name }}</span><span style="color:#6B6B6B">·</span><a href="#/" style="color:#CAE2FB">All variants</a>
+</div>
+</sc-if>
+<sc-if value="{{ pg.start }}" hint-placeholder-val="{{ true }}">
+<div data-screen-label="Start" style="background:#fff">
+<div style="background:#F4F4F4;min-height:100vh">
+<div style="background:#fff;border-bottom:1px solid #EBEBEB">
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px">
+<x-import component-from-global-scope="DesignSystem_e25ee1.LogoDesktop" property1="default" hint-size="130px,44px"></x-import>
+<div style="display:flex;align-items:center;gap:16px">
+<span style="font:500 14px/21px var(--font-sans);color:#6B6B6B">Special offers · clickable prototype</span>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="flat" size="md" icons="right" text="Design brief" href="design-brief.html" hint-size="auto,36px"></x-import>
+</div>
+</div>
+</div>
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;padding:56px 0 80px;display:flex;flex-direction:column;gap:48px">
+<div style="display:flex;flex-direction:column;gap:12px;max-width:720px">
+<h1 style="font:700 40px/48px var(--font-sans);margin:0;color:#1A1A1A">Pick a variant</h1>
+<p style="font:400 18px/24px var(--font-sans);margin:0;color:#333;text-wrap:pretty">Each variant opens as a working page. Listing cards lead into the campaign pages, breadcrumbs lead back, and every Search trip or Book button lands on a booking stub that shows what would be handed to the booking flow.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<h2 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A">Listing pages</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#fff;border-radius:24px;box-shadow:inset 0 0 0 1px #EBEBEB;transition:box-shadow 120ms" style-hover="box-shadow:inset 0 0 0 1px #034592, 0 1px 8px rgba(0,0,0,.06)">
+<div style="display:flex;align-items:center;gap:8px"><x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="default" strong="{{ true }}" size="sm" text="1a" hint-size="auto,24px"></x-import></div>
+<span style="font:500 20px/30px var(--font-sans);color:#1A1A1A">Listing with filters</span>
+<span style="font:400 14px/21px var(--font-sans);color:#333;text-wrap:pretty">One list for all offers. Filter chips replace the separate Day trips page; a featured campaign slot sits on top.</span>
+<div style="margin-top:auto;padding-top:8px"><x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="secondary" size="md" icons="right" text="Open" href="#/listing" hint-size="auto,36px"></x-import></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#fff;border-radius:24px;box-shadow:inset 0 0 0 1px #EBEBEB;transition:box-shadow 120ms" style-hover="box-shadow:inset 0 0 0 1px #034592, 0 1px 8px rgba(0,0,0,.06)">
+<div style="display:flex;align-items:center;gap:8px"><x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="default" strong="{{ true }}" size="sm" text="2c" hint-size="auto,24px"></x-import></div>
+<span style="font:500 20px/30px var(--font-sans);color:#1A1A1A">Guided deal finder</span>
+<span style="font:400 14px/21px var(--font-sans);color:#333;text-wrap:pretty">Three questions instead of a filter bar. Each answer rewrites the shortlist and promotes the best match.</span>
+<div style="margin-top:auto;padding-top:8px"><x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="secondary" size="md" icons="right" text="Open" href="#/finder" hint-size="auto,36px"></x-import></div>
+</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<h2 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A">Campaign pages</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#fff;border-radius:24px;box-shadow:inset 0 0 0 1px #EBEBEB;transition:box-shadow 120ms" style-hover="box-shadow:inset 0 0 0 1px #034592, 0 1px 8px rgba(0,0,0,.06)">
+<div style="display:flex;align-items:center;gap:8px"><x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="default" strong="{{ true }}" size="sm" text="1b" hint-size="auto,24px"></x-import></div>
+<span style="font:500 20px/30px var(--font-sans);color:#1A1A1A">Cruise hub</span>
+<span style="font:400 14px/21px var(--font-sans);color:#333;text-wrap:pretty">Several products on one page. Product tiles in the booking panel; themed sailings as dated chips that deep-link into booking.</span>
+<div style="margin-top:auto;padding-top:8px"><x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="secondary" size="md" icons="right" text="Open" href="#/campaign/hub" hint-size="auto,36px"></x-import></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#fff;border-radius:24px;box-shadow:inset 0 0 0 1px #EBEBEB;transition:box-shadow 120ms" style-hover="box-shadow:inset 0 0 0 1px #034592, 0 1px 8px rgba(0,0,0,.06)">
+<div style="display:flex;align-items:center;gap:8px"><x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="default" strong="{{ true }}" size="sm" text="2b" hint-size="auto,24px"></x-import></div>
+<span style="font:500 20px/30px var(--font-sans);color:#1A1A1A">Sailing calendar</span>
+<span style="font:400 14px/21px var(--font-sans);color:#333;text-wrap:pretty">The same cruises as a calendar. Filter by product, pick a date, book from the side panel.</span>
+<div style="margin-top:auto;padding-top:8px"><x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="secondary" size="md" icons="right" text="Open" href="#/campaign/calendar" hint-size="auto,36px"></x-import></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#fff;border-radius:24px;box-shadow:inset 0 0 0 1px #EBEBEB;transition:box-shadow 120ms" style-hover="box-shadow:inset 0 0 0 1px #034592, 0 1px 8px rgba(0,0,0,.06)">
+<div style="display:flex;align-items:center;gap:8px"><x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="default" strong="{{ true }}" size="sm" text="1c" hint-size="auto,24px"></x-import></div>
+<span style="font:500 20px/30px var(--font-sans);color:#1A1A1A">Sale with deal selector</span>
+<span style="font:400 14px/21px var(--font-sans);color:#333;text-wrap:pretty">A sale with four offer codes. The selected deal’s code is applied automatically.</span>
+<div style="margin-top:auto;padding-top:8px"><x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="secondary" size="md" icons="right" text="Open" href="#/campaign/sale" hint-size="auto,36px"></x-import></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#fff;border-radius:24px;box-shadow:inset 0 0 0 1px #EBEBEB;transition:box-shadow 120ms" style-hover="box-shadow:inset 0 0 0 1px #034592, 0 1px 8px rgba(0,0,0,.06)">
+<div style="display:flex;align-items:center;gap:8px"><x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="default" strong="{{ true }}" size="sm" text="3a" hint-size="auto,24px"></x-import></div>
+<span style="font:500 20px/30px var(--font-sans);color:#1A1A1A">Editorial, booking first</span>
+<span style="font:400 14px/21px var(--font-sans);color:#333;text-wrap:pretty">The sale as a long read with the booking panel in the hero and one chapter per deal.</span>
+<div style="margin-top:auto;padding-top:8px"><x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="secondary" size="md" icons="right" text="Open" href="#/campaign/editorial-booking" hint-size="auto,36px"></x-import></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#fff;border-radius:24px;box-shadow:inset 0 0 0 1px #EBEBEB;transition:box-shadow 120ms" style-hover="box-shadow:inset 0 0 0 1px #034592, 0 1px 8px rgba(0,0,0,.06)">
+<div style="display:flex;align-items:center;gap:8px"><x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="default" strong="{{ true }}" size="sm" text="2a" hint-size="auto,24px"></x-import></div>
+<span style="font:500 20px/30px var(--font-sans);color:#1A1A1A">Editorial with deal bar</span>
+<span style="font:400 14px/21px var(--font-sans);color:#333;text-wrap:pretty">The long read with a sticky deal bar instead; booking panel at the end.</span>
+<div style="margin-top:auto;padding-top:8px"><x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="secondary" size="md" icons="right" text="Open" href="#/campaign/editorial" hint-size="auto,36px"></x-import></div>
+</div>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<h2 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A">Mobile</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#fff;border-radius:24px;box-shadow:inset 0 0 0 1px #EBEBEB;transition:box-shadow 120ms" style-hover="box-shadow:inset 0 0 0 1px #034592, 0 1px 8px rgba(0,0,0,.06)">
+<div style="display:flex;align-items:center;gap:8px"><x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="default" strong="{{ true }}" size="sm" text="1d" hint-size="auto,24px"></x-import></div>
+<span style="font:500 20px/30px var(--font-sans);color:#1A1A1A">Mobile cruise hub</span>
+<span style="font:400 14px/21px var(--font-sans);color:#333;text-wrap:pretty">The cruise hub at 375px, shown in a phone-width frame.</span>
+<div style="margin-top:auto;padding-top:8px"><x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="secondary" size="md" icons="right" text="Open" href="#/campaign/mobile" hint-size="auto,36px"></x-import></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ pg.listing }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="1a Listing with filters" style="background:#fff">
+
+<x-import component-from-global-scope="DesignSystem_e25ee1.HeaderWeb" version="desktop" dc-props="{{ wFull }}" hint-size="100%,108px"></x-import>
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;padding:16px 0 0">
+<nav aria-label="Breadcrumb" style="display:flex;align-items:center;gap:8px;font:400 14px/21px var(--font-sans);color:#333"><a href="#/" style="color:#034592">Home</a><span style="color:#949494">/</span><span style="color:#6B6B6B">Special offers</span></nav>
+</div>
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;padding:24px 0 0;display:flex;flex-direction:column;gap:12px">
+<h1 style="font:700 40px/48px var(--font-sans);color:#1A1A1A;margin:0">Special offers</h1>
+<p style="font:400 18px/24px var(--font-sans);color:#333;margin:0;max-width:720px;text-wrap:pretty">Take advantage of our best offers! View our latest special offers below and book online for the best fares.</p>
+</div>
+
+<div style="width:min(1140px, calc(100% - 48px));margin:32px auto 0;display:grid;grid-template-columns:540px minmax(0,1fr);background:#034592;border-radius:24px;overflow:hidden;color:#fff">
+<div style="position:relative;background:#EBEBEB;min-height:360px;overflow:hidden">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" src="https://s7g10.scene7.com/is/image/stena/020925D_STENA_LINE_1466:Special-Offer-Teaser-List-Item" alt="Man with suitcase walking through a bright onboard lounge" dc-props="{{ fill }}" hint-size="100%,360px"></x-import>
+</div>
+<div style="padding:40px;display:flex;flex-direction:column;gap:16px;justify-content:center;align-items:flex-start">
+<div style="display:flex;align-items:center;gap:12px">
+<span style="font:700 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#fff">Featured campaign</span>
+<x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="warning" size="sm" text="Ends Sun 1 Nov · 12 days left" hint-size="auto,24px"></x-import>
+</div>
+<h2 style="font:700 32px/40px var(--font-sans);margin:0;color:#fff;text-wrap:pretty">Winter Sale: four ways to save on Holland</h2>
+<p style="font:400 16px/24px var(--font-sans);margin:0;color:#fff;max-width:480px;text-wrap:pretty">20% off short stays, caravans go free, half-price cabins on day sailings and 15% off autumn getaways. All on Harwich – Hook of Holland, all on one page.</p>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="secondary" colour="blue" size="lg" text="See all four deals" icons="right" href="#/campaign/editorial-booking" hint-size="auto,48px"></x-import>
+</div>
+</div>
+
+<div style="width:min(1140px, calc(100% - 48px));margin:40px auto 0;display:flex;align-items:center;justify-content:space-between;gap:24px">
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+<button onClick="{{ f.onClick }}" style="appearance:none;border:0;margin:0;cursor:pointer;height:36px;padding:0 16px;border-radius:108px;font:500 16px/24px var(--font-sans);display:inline-flex;align-items:center;gap:8px;background:{{ f.bg }};color:{{ f.fg }};box-shadow:{{ f.ring }};transition:background-color 120ms" style-hover="background:{{ f.hoverBg }}"><span>{{ f.label }}</span><span style="font:400 14px/21px var(--font-sans);opacity:.75">{{ f.count }}</span></button>
+</sc-for>
+</div>
+<x-import component-from-global-scope="DesignSystem_e25ee1.LabelledTextInputWebui" type="select" title="Route" text="{{ regionText }}" onClick="{{ cycleRegion }}" dc-props="{{ w260 }}" hint-size="260px,64px"></x-import>
+</div>
+<div style="width:min(1140px, calc(100% - 48px));margin:16px auto 0;font:400 14px/21px var(--font-sans);color:#6B6B6B">{{ offerCount }}</div>
+
+<div style="width:min(1140px, calc(100% - 48px));margin:16px auto 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+<sc-for list="{{ offers }}" as="o" hint-placeholder-count="6">
+<div style="display:flex;flex-direction:column;background:#fff;box-shadow:inset 0 0 0 1px #EBEBEB;border-radius:24px;overflow:hidden;transition:box-shadow 120ms" style-hover="box-shadow:inset 0 0 0 1px #034592, 0 1px 8px rgba(0,0,0,.06)">
+<div style="position:relative">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" aspect-ratio="3:2" src="{{ o.img }}" alt="" hint-size="100%,243px"></x-import>
+<div style="position:absolute;left:16px;top:16px;display:flex;gap:8px">
+<x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="default" strong="{{ true }}" size="sm" text="{{ o.cat }}" hint-size="auto,24px"></x-import>
+<sc-if value="{{ o.ending }}" hint-placeholder-val="{{ false }}"><x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="warning" size="sm" text="Ending soon" hint-size="auto,24px"></x-import></sc-if>
+</div>
+</div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:8px;flex:1">
+<div style="font:700 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#034592">{{ o.route }}</div>
+<h3 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A;text-wrap:pretty">{{ o.title }}</h3>
+<p style="font:400 14px/21px var(--font-sans);color:#333;margin:0;height:42px;overflow:hidden">{{ o.teaser }}</p>
+<div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:auto;padding-top:8px;gap:12px">
+<div style="display:flex;flex-direction:column;flex:1;min-width:0"><span style="font:700 16px/24px var(--font-sans);color:#1A1A1A">{{ o.price }}</span><span style="font:400 14px/21px var(--font-sans);color:#6B6B6B">{{ o.valid }}</span></div>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="flat" size="md" icons="right" text="{{ o.cta }}" href="{{ o.href }}" hint-size="auto,36px"></x-import>
+</div>
+</div>
+</div>
+</sc-for>
+</div>
+
+<div style="width:min(1140px, calc(100% - 48px));margin:64px auto 0;display:grid;grid-template-columns:660px minmax(0,1fr);gap:24px;align-items:stretch">
+<div style="background:#CAE2FB;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:24px;box-sizing:border-box">
+<div style="display:flex;flex-direction:column;gap:8px"><h2 style="font:500 24px/36px var(--font-sans);margin:0;color:#1A1A1A">Sign up to our newsletter</h2><p style="font:400 16px/24px var(--font-sans);margin:0;color:#333">Stay up to date on the latest news, offers and trip ideas</p></div>
+<div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+<x-import component-from-global-scope="DesignSystem_e25ee1.LabelledTextInputWebui" type="input single" title="E-mail address" placeholder="name@example.com" dc-props="{{ w330 }}" hint-size="330px,64px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="primary" size="lg" text="Sign up to newsletter" hint-size="auto,48px"></x-import>
+</div>
+<p style="font:400 12px/18px var(--font-sans);margin:0;color:#333">By signing up you consent that Stena Line will use your email address to send news and special offers. Read our full <a href="#">Privacy Policy</a>. You can easily unsubscribe at any time.</p>
+</div>
+<div style="background:#FCE1DB;border-radius:24px;padding:40px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;box-sizing:border-box">
+<div style="display:flex;flex-direction:column;gap:8px"><h2 style="font:500 24px/36px var(--font-sans);margin:0;color:#1A1A1A">Customer Service</h2><p style="font:400 16px/24px var(--font-sans);margin:0;color:#333">Do you have questions or need help with your booking? Contact our customer support or find the answers to the most common questions in our FAQ.</p></div>
+<div style="display:flex;gap:16px;flex-wrap:wrap">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="secondary" size="md" text="Contact us" hint-size="auto,36px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="flat" size="md" text="Visit FAQ" hint-size="auto,36px"></x-import>
+</div>
+</div>
+</div>
+<div style="margin-top:64px"><div style="position:relative;background:#fff">
+<div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
+<x-import component-from-global-scope="DesignSystem_e25ee1.FooterWeb" device="desktop" open="n/a" dc-props="{{ wFull }}" hint-size="100%,680px"></x-import>
+</div></div>
+
+</div>
+</sc-if>
+<sc-if value="{{ pg.finder }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="2c Guided deal finder" style="background:#fff">
+
+<x-import component-from-global-scope="DesignSystem_e25ee1.HeaderWeb" version="desktop" dc-props="{{ wFull }}" hint-size="100%,108px"></x-import>
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;padding:16px 0">
+<nav aria-label="Breadcrumb" style="display:flex;align-items:center;gap:8px;font:400 14px/21px var(--font-sans);color:#333"><a href="#/" style="color:#034592">Home</a><span style="color:#949494">/</span><span style="color:#6B6B6B">Special offers</span></nav>
+</div>
+<div style="background:#034592;padding:56px 0 136px">
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;display:flex;flex-direction:column;gap:12px">
+<h1 style="font:700 40px/48px var(--font-sans);margin:0;color:#fff">Find your deal</h1>
+<p style="font:400 18px/24px var(--font-sans);margin:0;color:#fff;max-width:640px;text-wrap:pretty">Tell us three things and we will shortlist the offers that fit your trip.</p>
+</div>
+</div>
+<div style="width:min(1140px, calc(100% - 48px));margin:-96px auto 0;position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start">
+<sc-for list="{{ cfg.steps }}" as="s" hint-placeholder-count="3">
+<div style="background:#fff;border-radius:24px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,.16);display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px"><span style="width:32px;height:32px;border-radius:16px;background:#034592;color:#fff;font:700 14px/32px var(--font-sans);text-align:center;flex-shrink:0">{{ s.num }}</span><span style="font:500 20px/30px var(--font-sans);color:#1A1A1A">{{ s.title }}</span></div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{ s.options }}" as="o" hint-placeholder-count="3">
+<button onClick="{{ o.onClick }}" style="appearance:none;border:0;margin:0;cursor:pointer;text-align:left;display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:12px;background:{{ o.bg }};box-shadow:{{ o.ring }};font:500 16px/24px var(--font-sans);color:#1A1A1A;transition:background-color 120ms" style-hover="background:#E5F0FB">
+<span style="color:#004A93;display:inline-flex;flex-shrink:0"><x-import component-from-global-scope="DesignSystem_e25ee1.Icon" name="{{ o.icon }}" size="{{ 24 }}" hint-size="24px,24px"></x-import></span>
+<span style="flex:1">{{ o.label }}</span>
+<span style="font:400 14px/21px var(--font-sans);color:#6B6B6B">{{ o.count }}</span>
+</button>
+</sc-for>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="width:min(1140px, calc(100% - 48px));margin:56px auto 0;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px">
+<h2 style="font:500 24px/36px var(--font-sans);margin:0;color:#1A1A1A">{{ cfg.summary }}</h2>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="flat" size="md" text="Start over" onClick="{{ cfg.reset }}" hint-size="auto,36px"></x-import>
+</div>
+<sc-if value="{{ cfg.hasBest }}" hint-placeholder-val="{{ true }}">
+<div style="display:grid;grid-template-columns:560px minmax(0,1fr);background:#fff;border-radius:24px;overflow:hidden;box-shadow:inset 0 0 0 2px #034592">
+<div style="position:relative;min-height:360px;background:#EBEBEB;overflow:hidden"><x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" src="{{ cfg.best.img }}" alt="" dc-props="{{ fill }}" hint-size="100%,360px"></x-import></div>
+<div style="padding:40px;display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+<div style="display:flex;gap:8px"><x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="success" size="sm" text="Best match" hint-size="auto,24px"></x-import><x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="default" strong="{{ true }}" size="sm" text="{{ cfg.best.cat }}" hint-size="auto,24px"></x-import></div>
+<span style="font:700 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#034592">{{ cfg.best.route }}</span>
+<h3 style="font:700 32px/40px var(--font-sans);margin:0;color:#1A1A1A;text-wrap:pretty">{{ cfg.best.title }}</h3>
+<p style="font:400 18px/27px var(--font-sans);margin:0;color:#333;text-wrap:pretty">{{ cfg.best.teaser }}</p>
+<div style="display:flex;align-items:center;gap:20px;margin-top:auto;padding-top:12px">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="primary" colour="blue" size="lg" text="{{ cfg.best.cta }}" href="{{ cfg.best.href }}" hint-size="auto,48px"></x-import>
+<div style="display:flex;flex-direction:column"><span style="font:700 16px/24px var(--font-sans);color:#1A1A1A">{{ cfg.best.price }}</span><span style="font:400 14px/21px var(--font-sans);color:#6B6B6B">{{ cfg.best.valid }}</span></div>
+</div>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ cfg.empty }}" hint-placeholder-val="{{ false }}">
+<div style="background:#F4F4F4;border-radius:24px;padding:48px;display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center">
+<span style="font:500 20px/30px var(--font-sans);color:#1A1A1A">Nothing matches all three yet</span>
+<span style="font:400 16px/24px var(--font-sans);color:#333">Try another trip type or route. Counts next to each answer show what is available.</span>
+</div>
+</sc-if>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+<sc-for list="{{ cfg.rest }}" as="o" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;background:#fff;box-shadow:inset 0 0 0 1px #EBEBEB;border-radius:24px;overflow:hidden;transition:box-shadow 120ms" style-hover="box-shadow:inset 0 0 0 1px #034592, 0 1px 8px rgba(0,0,0,.06)">
+<div style="position:relative">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" aspect-ratio="3:2" src="{{ o.img }}" alt="" hint-size="100%,243px"></x-import>
+<div style="position:absolute;left:16px;top:16px"><x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="default" strong="{{ true }}" size="sm" text="{{ o.cat }}" hint-size="auto,24px"></x-import></div>
+</div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:8px;flex:1">
+<div style="font:700 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#034592">{{ o.route }}</div>
+<h3 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A;text-wrap:pretty">{{ o.title }}</h3>
+<p style="font:400 14px/21px var(--font-sans);color:#333;margin:0;height:42px;overflow:hidden">{{ o.teaser }}</p>
+<div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:auto;padding-top:8px;gap:12px">
+<div style="display:flex;flex-direction:column"><span style="font:700 16px/24px var(--font-sans);color:#1A1A1A">{{ o.price }}</span><span style="font:400 14px/21px var(--font-sans);color:#6B6B6B">{{ o.valid }}</span></div>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="flat" size="md" icons="right" text="{{ o.cta }}" href="{{ o.href }}" hint-size="auto,36px"></x-import>
+</div>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+<div style="margin-top:64px"><div style="position:relative;background:#fff">
+<div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
+<x-import component-from-global-scope="DesignSystem_e25ee1.FooterWeb" device="desktop" open="n/a" dc-props="{{ wFull }}" hint-size="100%,680px"></x-import>
+</div></div>
+
+</div>
+</sc-if>
+<sc-if value="{{ pg.hub }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="1b Cruise hub" style="background:#fff">
+
+<x-import component-from-global-scope="DesignSystem_e25ee1.HeaderWeb" version="desktop" dc-props="{{ wFull }}" hint-size="100%,108px"></x-import>
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;padding:16px 0">
+<nav aria-label="Breadcrumb" style="display:flex;align-items:center;gap:8px;font:400 14px/21px var(--font-sans);color:#333"><a href="#/" style="color:#034592">Home</a><span style="color:#949494">/</span><a href="#/listing" style="color:#034592">Special offers</a><span style="color:#949494">/</span><span style="color:#6B6B6B">Cruises to Sweden</span></nav>
+</div>
+<div style="position:relative;height:440px;background:#EBEBEB;overflow:hidden">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" src="https://s7g10.scene7.com/is/image/stena/StenaLine_Web_3840x2160_EastAutumnSale?wid=1440" alt="" dc-props="{{ fill }}" hint-size="100%,440px"></x-import>
+<div style="position:absolute;inset:0;background:linear-gradient(195deg, rgba(0,0,0,0) 35%, rgba(0,0,0,.8) 100%)"></div>
+<div style="position:absolute;left:max(24px, calc(50% - 570px));right:max(24px, calc(50% - 570px));bottom:104px;color:#fff;display:flex;flex-direction:column;gap:8px">
+<span style="font:700 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase">Gdynia – Karlskrona · Stena Spirit</span>
+<h1 style="font:700 40px/48px var(--font-sans);margin:0;color:#fff;max-width:760px">Cruises to Sweden</h1>
+<p style="font:400 18px/24px var(--font-sans);margin:0;color:#fff;max-width:640px;text-wrap:pretty">Treat yourself to a refreshing break at sea: 24 or 36 hours onboard Stena Spirit, with themed sailings all autumn.</p>
+</div>
+</div>
+
+<div style="width:min(1140px, calc(100% - 48px));margin:-64px auto 0;position:relative;background:#fff;border-radius:16px;padding:24px;box-sizing:border-box;box-shadow:0 4px 20px rgba(0,0,0,.16);display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+<h2 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A">Find your trip</h2>
+<span style="font:400 14px/21px var(--font-sans);color:#6B6B6B">Prices per person · cabin included where stated</span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px">
+<sc-for list="{{ h.products }}" as="p" hint-placeholder-count="2">
+<div onClick="{{ p.onClick }}" style="cursor:pointer;border-radius:16px;padding:16px;display:flex;gap:4px;align-items:flex-start;background:{{ p.bg }};box-shadow:{{ p.ring }};transition:box-shadow 120ms, background-color 120ms">
+<x-import component-from-global-scope="DesignSystem_e25ee1.RadiobuttonWebui" selected="{{ p.radio }}" text1="{{ nbsp }}" hint-size="32px,24px"></x-import>
+<div style="display:flex;flex-direction:column;gap:4px;flex:1;min-width:0">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><span style="font:500 16px/24px var(--font-sans);color:#1A1A1A">{{ p.name }}</span><span style="font:700 16px/24px var(--font-sans);color:#1A1A1A;white-space:nowrap">{{ p.from }}</span></div>
+<span style="font:400 14px/21px var(--font-sans);color:#333">{{ p.desc }}</span>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:24px">
+<x-import component-from-global-scope="DesignSystem_e25ee1.RadiobuttonWebui" selected="yes" text1="Return trip" hint-size="auto,24px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.RadiobuttonWebui" selected="no" text1="One way" hint-size="auto,24px"></x-import>
+</div>
+<div style="display:flex;gap:16px;align-items:center">
+<x-import component-from-global-scope="DesignSystem_e25ee1.FindBookDestinationSelector" type="locked route" text1="Route" text2="Gdynia – Karlskrona" dc-props="{{ fRoute }}" hint-size="370px,72px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.FindBookDateSelector" type="return" text1="Outward date" text2="{{ h.outText }}" text3="Return date" text4="{{ h.homeText }}" dc-props="{{ fDates }}" hint-size="470px,72px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" colour="red" size="larger" text="Search trip" href="{{ h.searchHref }}" dc-props="{{ wGrow }}" hint-size="220px,72px"></x-import>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px;font:400 14px/21px var(--font-sans);color:#333">
+<x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="{{ h.tagType }}" size="sm" text="{{ h.tagText }}" hint-size="auto,24px"></x-import>
+<span>{{ h.hint }}</span>
+</div>
+</div>
+
+<div style="width:min(1140px, calc(100% - 48px));margin:64px auto 0;display:grid;grid-template-columns:460px minmax(0,1fr);gap:24px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:16px">
+<h2 style="font:700 24px/32px var(--font-sans);margin:0;color:#1A1A1A">{{ h.includedTitle }}</h2>
+<p style="font:400 16px/24px var(--font-sans);margin:0;color:#333;text-wrap:pretty">Step onboard Stena Spirit and enjoy a relaxing mini getaway where the journey itself is the experience. Make yourself comfortable in your private cabin, breathe in the sea air and take your time exploring the ship.</p>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px">
+<sc-for list="{{ h.included }}" as="i" hint-placeholder-count="4">
+<li style="display:flex;gap:12px;align-items:flex-start;font:400 16px/24px var(--font-sans);color:#1A1A1A"><span style="width:24px;height:24px;border-radius:12px;background:#D7F0CF;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:#1C5E38"><x-import component-from-global-scope="DesignSystem_e25ee1.Icon" name="CheckThick" size="{{ 14 }}" hint-size="14px,14px"></x-import></span><span>{{ i.text }}</span></li>
+</sc-for>
+</ul>
+</div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" aspect-ratio="3:2" radius="{{ 24 }}" src="https://s7g10.scene7.com/is/image/stena/20231030_BreakfastBuffet_212-126-IMG_0268:16-9" alt="Breakfast buffet onboard" hint-size="100%,210px"></x-import>
+<div style="font:500 18px/27px var(--font-sans);color:#1A1A1A">Tasty meals</div>
+<div style="font:400 14px/21px var(--font-sans);color:#333">Breakfast and dinner buffets so your trip starts and ends on a delicious note.</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" aspect-ratio="3:2" radius="{{ 24 }}" src="https://s7g10.scene7.com/is/image/stena/E-Flexer_2I_cabin_1:16-9" alt="Standard cabin" hint-size="100%,210px"></x-import>
+<div style="font:500 18px/27px var(--font-sans);color:#1A1A1A">Comfortable cabin</div>
+<div style="font:400 14px/21px var(--font-sans);color:#333">A Standard cabin with private bathroom, towels, single beds, TV and a table.</div>
+</div>
+</div>
+</div>
+
+<div style="background:#F4F4F4;margin-top:64px;padding:64px 0">
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:24px">
+<div style="display:flex;flex-direction:column;gap:4px">
+<h2 style="font:700 24px/32px var(--font-sans);margin:0;color:#1A1A1A">Themed sailings this autumn</h2>
+<span style="font:400 16px/24px var(--font-sans);color:#333">Pick a departure to book it straight away. Entertainment, event buffet and a night onboard are part of the cruise.</span>
+</div>
+<div style="display:flex;gap:4px;padding:4px;border-radius:12px;box-shadow:inset 0 0 0 2px #EBEBEB;background:#fff">
+<sc-for list="{{ h.months }}" as="mo" hint-placeholder-count="4">
+<button onClick="{{ mo.onClick }}" style="appearance:none;border:0;margin:0;cursor:pointer;border-radius:8px;padding:4px 12px;font:500 16px/24px var(--font-sans);color:#1A1A1A;background:{{ mo.bg }}" style-hover="background:#E5F0FB">{{ mo.label }}</button>
+</sc-for>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+<sc-for list="{{ h.themes }}" as="t" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;background:#fff;border-radius:24px;overflow:hidden;box-shadow:inset 0 0 0 1px #EBEBEB">
+<div style="position:relative">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" aspect-ratio="16:9" src="{{ t.img }}" alt="" hint-size="100%,200px"></x-import>
+<div style="position:absolute;left:16px;top:16px"><x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="default" strong="{{ true }}" size="sm" text="{{ t.variants }}" hint-size="auto,24px"></x-import></div>
+</div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:12px;flex:1">
+<h3 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A">{{ t.title }}</h3>
+<p style="font:400 14px/21px var(--font-sans);margin:0;color:#333;text-wrap:pretty">{{ t.desc }}</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:4px">
+<sc-for list="{{ t.chips }}" as="c" hint-placeholder-count="2">
+<a href="{{ c.href }}" onClick="{{ c.onClick }}" style="display:inline-flex;align-items:center;height:32px;padding:0 12px;border-radius:108px;font:500 14px/21px var(--font-sans);text-decoration:none;box-shadow:inset 0 0 0 1px #034592;background:{{ c.bg }};color:{{ c.fg }};opacity:{{ c.opacity }};transition:opacity 120ms, background-color 120ms" style-hover="background:#E5F0FB;opacity:1">{{ c.label }}</a>
+</sc-for>
+</div>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="secondary" size="md" text="{{ t.bookLabel }}" href="{{ t.bookHref }}" hint-size="auto,36px"></x-import>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+
+<div style="width:min(1140px, calc(100% - 48px));margin:64px auto 0;display:grid;grid-template-columns:460px minmax(0,1fr);gap:24px;align-items:start">
+<div style="background:#fff;border-radius:24px;box-shadow:inset 0 0 0 1px #EBEBEB;padding:24px;display:flex;flex-direction:column;gap:16px">
+<h2 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A">{{ h.pricesTitle }}</h2>
+<div style="display:flex;flex-direction:column">
+<sc-for list="{{ h.prices }}" as="r" hint-placeholder-count="3">
+<div style="display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid #EBEBEB;font:400 16px/24px var(--font-sans);color:#1A1A1A"><span>{{ r.label }}</span><span style="font-weight:700">{{ r.price }}</span></div>
+</sc-for>
+</div>
+<span style="font:400 14px/21px var(--font-sans);color:#6B6B6B">Prices vary by departure date and cabin availability.</span>
+</div>
+<div style="background:#fff;border-radius:24px;box-shadow:inset 0 0 0 1px #EBEBEB;padding:24px;display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+<h2 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A">Terms and conditions</h2>
+<ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{ h.tc }}" as="x" hint-placeholder-count="2">
+<li style="font:400 14px/21px var(--font-sans);color:#333">{{ x.text }}</li>
+</sc-for>
+</ul>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="flat" size="md" text="{{ h.tcLabel }}" onClick="{{ h.tcToggle }}" hint-size="auto,36px"></x-import>
+<span style="font:400 14px/21px var(--font-sans);color:#6B6B6B">Stena Line Terms of Business apply to all bookings. <a href="#">Read the full terms.</a></span>
+</div>
+</div>
+
+<div style="width:min(1140px, calc(100% - 48px));margin:64px auto 0;display:flex;flex-direction:column;gap:24px">
+<h2 style="font:700 24px/32px var(--font-sans);margin:0;color:#1A1A1A">Good to know onboard Stena Spirit</h2>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px">
+<sc-for list="{{ onboard }}" as="u" hint-placeholder-count="4">
+<div style="display:flex;gap:16px;align-items:flex-start">
+<span style="width:48px;height:48px;border-radius:24px;background:#CAE2FB;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:#004A93"><x-import component-from-global-scope="DesignSystem_e25ee1.Icon" name="{{ u.icon }}" size="{{ 24 }}" hint-size="24px,24px"></x-import></span>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font:500 16px/24px var(--font-sans);color:#1A1A1A">{{ u.title }}</span><span style="font:400 14px/21px var(--font-sans);color:#333">{{ u.text }}</span></div>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="width:min(1140px, calc(100% - 48px));margin:64px auto 0;display:grid;grid-template-columns:660px minmax(0,1fr);gap:24px;align-items:stretch">
+<div style="background:#CAE2FB;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:24px;box-sizing:border-box">
+<div style="display:flex;flex-direction:column;gap:8px"><h2 style="font:500 24px/36px var(--font-sans);margin:0;color:#1A1A1A">Sign up to our newsletter</h2><p style="font:400 16px/24px var(--font-sans);margin:0;color:#333">Stay up to date on the latest news, offers and trip ideas</p></div>
+<div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+<x-import component-from-global-scope="DesignSystem_e25ee1.LabelledTextInputWebui" type="input single" title="E-mail address" placeholder="name@example.com" dc-props="{{ w330 }}" hint-size="330px,64px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="primary" size="lg" text="Sign up to newsletter" hint-size="auto,48px"></x-import>
+</div>
+<p style="font:400 12px/18px var(--font-sans);margin:0;color:#333">By signing up you consent that Stena Line will use your email address to send news and special offers. Read our full <a href="#">Privacy Policy</a>. You can easily unsubscribe at any time.</p>
+</div>
+<div style="background:#FCE1DB;border-radius:24px;padding:40px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;box-sizing:border-box">
+<div style="display:flex;flex-direction:column;gap:8px"><h2 style="font:500 24px/36px var(--font-sans);margin:0;color:#1A1A1A">Customer Service</h2><p style="font:400 16px/24px var(--font-sans);margin:0;color:#333">Do you have questions or need help with your booking? Contact our customer support or find the answers to the most common questions in our FAQ.</p></div>
+<div style="display:flex;gap:16px;flex-wrap:wrap">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="secondary" size="md" text="Contact us" hint-size="auto,36px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="flat" size="md" text="Visit FAQ" hint-size="auto,36px"></x-import>
+</div>
+</div>
+</div>
+<div style="margin-top:64px"><div style="position:relative;background:#fff">
+<div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
+<x-import component-from-global-scope="DesignSystem_e25ee1.FooterWeb" device="desktop" open="n/a" dc-props="{{ wFull }}" hint-size="100%,680px"></x-import>
+</div></div>
+
+</div>
+</sc-if>
+<sc-if value="{{ pg.calendar }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="2b Sailing calendar" style="background:#fff">
+
+<x-import component-from-global-scope="DesignSystem_e25ee1.HeaderWeb" version="desktop" dc-props="{{ wFull }}" hint-size="100%,108px"></x-import>
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;padding:16px 0 0">
+<nav aria-label="Breadcrumb" style="display:flex;align-items:center;gap:8px;font:400 14px/21px var(--font-sans);color:#333"><a href="#/" style="color:#034592">Home</a><span style="color:#949494">/</span><a href="#/listing" style="color:#034592">Special offers</a><span style="color:#949494">/</span><span style="color:#6B6B6B">Cruises to Sweden</span></nav>
+</div>
+<div style="width:min(1140px, calc(100% - 48px));margin:24px auto 0;display:flex;justify-content:space-between;align-items:flex-end;gap:48px">
+<div style="display:flex;flex-direction:column;gap:12px;max-width:640px">
+<span style="font:700 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#034592">Gdynia – Karlskrona · Stena Spirit</span>
+<h1 style="font:700 40px/48px var(--font-sans);margin:0;color:#1A1A1A">Cruises to Sweden</h1>
+<p style="font:400 18px/24px var(--font-sans);margin:0;color:#333;text-wrap:pretty">Pick a departure. Every cruise includes your cabin, meals and themed entertainment onboard; choose 24 or 36 hours at sea.</p>
+</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end">
+<sc-for list="{{ cal.filters }}" as="f" hint-placeholder-count="4">
+<button onClick="{{ f.onClick }}" style="appearance:none;border:0;margin:0;cursor:pointer;height:36px;padding:0 16px;border-radius:108px;font:500 16px/24px var(--font-sans);background:{{ f.bg }};color:{{ f.fg }};box-shadow:{{ f.ring }};transition:background-color 120ms" style-hover="background:{{ f.hoverBg }}">{{ f.label }}</button>
+</sc-for>
+</div>
+</div>
+<div style="width:min(1140px, calc(100% - 48px));margin:32px auto 0;display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:24px;align-items:start">
+<div style="border:1px solid #EBEBEB;border-radius:24px;overflow:hidden;background:#fff">
+<div style="padding:16px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #EBEBEB">
+<div style="display:flex;align-items:center;gap:12px">
+<span style="font:500 20px/30px var(--font-sans);color:#1A1A1A">Autumn 2026</span>
+<span style="font:400 14px/21px var(--font-sans);color:#6B6B6B">Mon 26 Oct – Sun 6 Dec</span>
+</div>
+<div style="display:flex;align-items:center;gap:16px;font:400 14px/21px var(--font-sans);color:#333">
+<span style="display:inline-flex;align-items:center;gap:6px"><span style="width:14px;height:14px;border-radius:4px;background:#CAE2FB;display:inline-block"></span>Event sailing</span>
+<span style="display:inline-flex;align-items:center;gap:6px"><span style="font:700 11px/16px var(--font-sans);color:#fff;background:#034592;border-radius:108px;padding:1px 8px">24h</span>Cruise product</span>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border-bottom:1px solid #EBEBEB">
+<div style="padding:8px 12px;font:500 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#6B6B6B">Mon</div>
+<div style="padding:8px 12px;font:500 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#6B6B6B">Tue</div>
+<div style="padding:8px 12px;font:500 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#6B6B6B">Wed</div>
+<div style="padding:8px 12px;font:500 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#6B6B6B">Thu</div>
+<div style="padding:8px 12px;font:500 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#6B6B6B">Fri</div>
+<div style="padding:8px 12px;font:500 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#6B6B6B">Sat</div>
+<div style="padding:8px 12px;font:500 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#6B6B6B">Sun</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr))">
+<sc-for list="{{ cal.cells }}" as="d" hint-placeholder-count="42">
+<div onClick="{{ d.onClick }}" style="min-height:116px;padding:10px 12px;box-sizing:border-box;border-right:1px solid #EBEBEB;border-bottom:1px solid #EBEBEB;display:flex;flex-direction:column;gap:6px;cursor:pointer;background:{{ d.bg }};box-shadow:{{ d.ring }};opacity:{{ d.opacity }};transition:background-color 120ms" style-hover="background:#E5F0FB">
+<div style="display:flex;justify-content:space-between;align-items:center"><span style="width:24px;height:24px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;font:500 14px/21px var(--font-sans);background:{{ d.numBg }};color:{{ d.numColor }}">{{ d.num }}</span><span style="font:500 12px/18px var(--font-sans);color:#6B6B6B">{{ d.monthTag }}</span></div>
+<sc-if value="{{ d.hasTheme }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:4px">
+<span style="font:500 13px/18px var(--font-sans);color:#1A1A1A;background:#CAE2FB;border-radius:8px;padding:4px 8px">{{ d.theme }}</span>
+<div style="display:flex;gap:4px"><sc-for list="{{ d.prods }}" as="p" hint-placeholder-count="1"><span style="font:700 11px/16px var(--font-sans);color:#fff;background:#034592;border-radius:108px;padding:1px 8px">{{ p.label }}</span></sc-for></div>
+</div>
+</sc-if>
+<span style="font:400 12px/18px var(--font-sans);color:#6B6B6B;margin-top:auto">{{ d.priceLine }}</span>
+</div>
+</sc-for>
+</div>
+</div>
+<div style="background:#fff;border-radius:24px;box-shadow:0 4px 20px rgba(0,0,0,.16);padding:24px;display:flex;flex-direction:column;gap:16px">
+<div style="border-radius:16px;overflow:hidden;background:#EBEBEB"><x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" aspect-ratio="16:9" src="{{ cal.sel.img }}" alt="" hint-size="100%,175px"></x-import></div>
+<div style="display:flex;flex-direction:column;gap:4px">
+<span style="font:700 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#034592">{{ cal.sel.dateLong }}</span>
+<h2 style="font:500 24px/36px var(--font-sans);margin:0;color:#1A1A1A">{{ cal.sel.title }}</h2>
+</div>
+<p style="font:400 16px/24px var(--font-sans);margin:0;color:#333;text-wrap:pretty">{{ cal.sel.desc }}</p>
+<div style="display:flex;flex-direction:column">
+<sc-for list="{{ cal.sel.options }}" as="o" hint-placeholder-count="2">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-top:1px solid #EBEBEB">
+<div style="display:flex;flex-direction:column;min-width:0"><span style="font:500 16px/24px var(--font-sans);color:#1A1A1A">{{ o.name }}</span><span style="font:400 14px/21px var(--font-sans);color:#6B6B6B">{{ o.meta }}</span></div>
+<div style="display:flex;align-items:center;gap:12px;flex-shrink:0"><span style="font:700 16px/24px var(--font-sans);color:#1A1A1A">{{ o.price }}</span><x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="{{ o.btnType }}" size="md" text="Book" href="{{ o.href }}" hint-size="auto,36px"></x-import></div>
+</div>
+</sc-for>
+</div>
+<span style="font:400 14px/21px var(--font-sans);color:#6B6B6B">Booking opens with the date and product pre-selected.</span>
+</div>
+</div>
+<div style="width:min(1140px, calc(100% - 48px));margin:64px auto 0;display:flex;flex-direction:column;gap:24px">
+<h2 style="font:700 24px/32px var(--font-sans);margin:0;color:#1A1A1A">What's included</h2>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px">
+<sc-for list="{{ cal.products }}" as="p" hint-placeholder-count="2">
+<div style="background:#fff;border-radius:24px;box-shadow:inset 0 0 0 1px #EBEBEB;padding:24px;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><h3 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A">{{ p.name }}</h3><span style="font:700 16px/24px var(--font-sans);color:#1A1A1A;white-space:nowrap">{{ p.from }}</span></div>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px">
+<sc-for list="{{ p.included }}" as="i" hint-placeholder-count="3">
+<li style="display:flex;gap:12px;align-items:flex-start;font:400 16px/24px var(--font-sans);color:#1A1A1A"><span style="width:24px;height:24px;border-radius:12px;background:#D7F0CF;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:#1C5E38"><x-import component-from-global-scope="DesignSystem_e25ee1.Icon" name="CheckThick" size="{{ 14 }}" hint-size="14px,14px"></x-import></span><span>{{ i.text }}</span></li>
+</sc-for>
+</ul>
+</div>
+</sc-for>
+</div>
+</div>
+<div style="margin-top:64px"><div style="position:relative;background:#fff">
+<div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
+<x-import component-from-global-scope="DesignSystem_e25ee1.FooterWeb" device="desktop" open="n/a" dc-props="{{ wFull }}" hint-size="100%,680px"></x-import>
+</div></div>
+
+</div>
+</sc-if>
+<sc-if value="{{ pg.sale }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="1c Sale with deal selector" style="background:#fff">
+
+<x-import component-from-global-scope="DesignSystem_e25ee1.HeaderWeb" version="desktop" dc-props="{{ wFull }}" hint-size="100%,108px"></x-import>
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;padding:16px 0">
+<nav aria-label="Breadcrumb" style="display:flex;align-items:center;gap:8px;font:400 14px/21px var(--font-sans);color:#333"><a href="#/" style="color:#034592">Home</a><span style="color:#949494">/</span><a href="#/listing" style="color:#034592">Special offers</a><span style="color:#949494">/</span><span style="color:#6B6B6B">Winter Sale</span></nav>
+</div>
+<div style="position:relative;height:440px;background:#EBEBEB;overflow:hidden">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" src="https://s7g10.scene7.com/is/image/stena/AdobeStock_641410334_1?wid=1440" alt="" dc-props="{{ fill }}" hint-size="100%,440px"></x-import>
+<div style="position:absolute;inset:0;background:linear-gradient(195deg, rgba(0,0,0,0) 35%, rgba(0,0,0,.8) 100%)"></div>
+<div style="position:absolute;left:max(24px, calc(50% - 570px));right:max(24px, calc(50% - 570px));bottom:104px;color:#fff;display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+<x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="warning" size="md" text="Sale ends Sun 1 Nov · 12 days left" hint-size="auto,24px"></x-import>
+<h1 style="font:700 40px/48px var(--font-sans);margin:0;color:#fff;max-width:760px">Winter Sale</h1>
+<p style="font:400 18px/24px var(--font-sans);margin:0;color:#fff;max-width:640px;text-wrap:pretty">Four ways to save on Harwich – Hook of Holland this winter. Pick a deal, choose your dates and the offer code is applied for you.</p>
+</div>
+</div>
+
+<div style="width:min(1140px, calc(100% - 48px));margin:-64px auto 0;position:relative;background:#fff;border-radius:16px;padding:24px;box-sizing:border-box;box-shadow:0 4px 20px rgba(0,0,0,.16);display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+<h2 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A">Find your trip</h2>
+<span style="font:400 14px/21px var(--font-sans);color:#6B6B6B">Economy, Flexi and Premium fares · new bookings only</span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px">
+<sc-for list="{{ sale.tiles }}" as="p" hint-placeholder-count="4">
+<div onClick="{{ p.onClick }}" style="cursor:pointer;border-radius:16px;padding:16px;display:flex;gap:4px;align-items:flex-start;background:{{ p.bg }};box-shadow:{{ p.ring }};transition:box-shadow 120ms, background-color 120ms">
+<x-import component-from-global-scope="DesignSystem_e25ee1.RadiobuttonWebui" selected="{{ p.radio }}" text1="{{ nbsp }}" hint-size="32px,24px"></x-import>
+<div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:0">
+<span style="font:500 16px/24px var(--font-sans);color:#1A1A1A">{{ p.name }}</span>
+<span style="font:400 14px/21px var(--font-sans);color:#6B6B6B">{{ p.valid }}</span>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:24px">
+<x-import component-from-global-scope="DesignSystem_e25ee1.RadiobuttonWebui" selected="yes" text1="Return trip" hint-size="auto,24px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.RadiobuttonWebui" selected="no" text1="One way" hint-size="auto,24px"></x-import>
+</div>
+<div style="display:flex;gap:16px;align-items:center">
+<x-import component-from-global-scope="DesignSystem_e25ee1.FindBookDestinationSelector" type="route" text1="Route" text2="Harwich – Hook of Holland" dc-props="{{ fRoute }}" hint-size="370px,72px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.FindBookDateSelector" type="return" text1="Outward date" text2="Select date" text3="Return date" text4="Select date" dc-props="{{ fDates }}" hint-size="470px,72px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" colour="red" size="larger" text="Search trip" href="{{ sale.searchHref }}" dc-props="{{ wGrow }}" hint-size="220px,72px"></x-import>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px;font:400 14px/21px var(--font-sans);color:#333">
+<x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="success" icon="{{ false }}" size="sm" text="{{ sale.codeTag }}" hint-size="auto,24px"></x-import>
+<span>Applied automatically. No need to type it at checkout.</span>
+</div>
+</div>
+
+<div style="width:min(1140px, calc(100% - 48px));margin:64px auto 0;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:4px">
+<h2 style="font:700 24px/32px var(--font-sans);margin:0;color:#1A1A1A">Four ways to save</h2>
+<span style="font:400 16px/24px var(--font-sans);color:#333">Each deal is a separate offer. Pick the one that fits your trip.</span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px">
+<sc-for list="{{ sale.cards }}" as="p" hint-placeholder-count="4">
+<div style="display:grid;grid-template-columns:220px minmax(0,1fr);background:#fff;border-radius:24px;overflow:hidden;box-shadow:{{ p.cardRing }};transition:box-shadow 120ms">
+<div style="position:relative;background:#EBEBEB;overflow:hidden;min-height:220px"><x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" src="{{ p.img }}" alt="" dc-props="{{ fill }}" hint-size="100%,220px"></x-import></div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:8px">
+<div style="font:700 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#034592">{{ p.valid }}</div>
+<h3 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A">{{ p.title }}</h3>
+<p style="font:400 14px/21px var(--font-sans);margin:0;color:#333;text-wrap:pretty">{{ p.desc }}</p>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:auto;padding-top:8px">
+<span style="font:700 16px/24px var(--font-sans);color:#1A1A1A">{{ p.from }}</span>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="{{ p.btnType }}" size="md" text="{{ p.btnLabel }}" onClick="{{ p.onClick }}" hint-size="auto,36px"></x-import>
+</div>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="width:min(1140px, calc(100% - 48px));margin:64px auto 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+<div style="display:flex;flex-direction:column;gap:8px"><h3 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A">How do I book?</h3><p style="font:400 16px/24px var(--font-sans);margin:0;color:#333;text-wrap:pretty">Choose a deal above and search for your sailing. The offer code is entered for you at the first stage of booking, so you see the discounted fares straight away.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px"><h3 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A">Keep it Flexi</h3><p style="font:400 16px/24px var(--font-sans);margin:0;color:#333;text-wrap:pretty">If plans change, switch your booking with no amendment fee on Flexi fares. You only pay the difference in fares.</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start"><h3 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A">Terms and conditions</h3>
+<ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{ sale.tc }}" as="x" hint-placeholder-count="2"><li style="font:400 14px/21px var(--font-sans);color:#333">{{ x.text }}</li></sc-for>
+</ul>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="flat" size="md" text="{{ sale.tcLabel }}" onClick="{{ sale.tcToggle }}" hint-size="auto,36px"></x-import>
+</div>
+</div>
+
+<div style="width:min(1140px, calc(100% - 48px));margin:64px auto 0;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px">
+<h2 style="font:700 24px/32px var(--font-sans);margin:0;color:#1A1A1A">More offers</h2>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="flat" size="md" icons="right" text="All special offers" href="#/listing" hint-size="auto,36px"></x-import>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+<sc-for list="{{ moreOffers }}" as="o" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;background:#fff;box-shadow:inset 0 0 0 1px #EBEBEB;border-radius:24px;overflow:hidden" style-hover="box-shadow:inset 0 0 0 1px #034592, 0 1px 8px rgba(0,0,0,.06)">
+<div style="position:relative">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" aspect-ratio="3:2" src="{{ o.img }}" alt="" hint-size="100%,243px"></x-import>
+<div style="position:absolute;left:16px;top:16px"><x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="default" strong="{{ true }}" size="sm" text="{{ o.cat }}" hint-size="auto,24px"></x-import></div>
+</div>
+<div style="padding:24px;display:flex;flex-direction:column;gap:8px;flex:1">
+<div style="font:700 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#034592">{{ o.route }}</div>
+<h3 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A">{{ o.title }}</h3>
+<div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:auto;padding-top:8px;gap:12px">
+<span style="font:700 16px/24px var(--font-sans);color:#1A1A1A">{{ o.price }}</span>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="flat" size="md" icons="right" text="{{ o.cta }}" href="{{ o.href }}" hint-size="auto,36px"></x-import>
+</div>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="width:min(1140px, calc(100% - 48px));margin:64px auto 0;display:grid;grid-template-columns:660px minmax(0,1fr);gap:24px;align-items:stretch">
+<div style="background:#CAE2FB;border-radius:24px;padding:40px;display:flex;flex-direction:column;gap:24px;box-sizing:border-box">
+<div style="display:flex;flex-direction:column;gap:8px"><h2 style="font:500 24px/36px var(--font-sans);margin:0;color:#1A1A1A">Sign up to our newsletter</h2><p style="font:400 16px/24px var(--font-sans);margin:0;color:#333">Stay up to date on the latest news, offers and trip ideas</p></div>
+<div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+<x-import component-from-global-scope="DesignSystem_e25ee1.LabelledTextInputWebui" type="input single" title="E-mail address" placeholder="name@example.com" dc-props="{{ w330 }}" hint-size="330px,64px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="primary" size="lg" text="Sign up to newsletter" hint-size="auto,48px"></x-import>
+</div>
+<p style="font:400 12px/18px var(--font-sans);margin:0;color:#333">By signing up you consent that Stena Line will use your email address to send news and special offers. Read our full <a href="#">Privacy Policy</a>. You can easily unsubscribe at any time.</p>
+</div>
+<div style="background:#FCE1DB;border-radius:24px;padding:40px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;box-sizing:border-box">
+<div style="display:flex;flex-direction:column;gap:8px"><h2 style="font:500 24px/36px var(--font-sans);margin:0;color:#1A1A1A">Customer Service</h2><p style="font:400 16px/24px var(--font-sans);margin:0;color:#333">Do you have questions or need help with your booking? Contact our customer support or find the answers to the most common questions in our FAQ.</p></div>
+<div style="display:flex;gap:16px;flex-wrap:wrap">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="secondary" size="md" text="Contact us" hint-size="auto,36px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="flat" size="md" text="Visit FAQ" hint-size="auto,36px"></x-import>
+</div>
+</div>
+</div>
+<div style="margin-top:64px"><div style="position:relative;background:#fff">
+<div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
+<x-import component-from-global-scope="DesignSystem_e25ee1.FooterWeb" device="desktop" open="n/a" dc-props="{{ wFull }}" hint-size="100%,680px"></x-import>
+</div></div>
+
+</div>
+</sc-if>
+<sc-if value="{{ pg.editorialBooking }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="3a Editorial, booking first" style="background:#fff">
+
+<x-import component-from-global-scope="DesignSystem_e25ee1.HeaderWeb" version="desktop" dc-props="{{ wFull }}" hint-size="100%,108px"></x-import>
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;padding:16px 0">
+<nav aria-label="Breadcrumb" style="display:flex;align-items:center;gap:8px;font:400 14px/21px var(--font-sans);color:#333"><a href="#/" style="color:#034592">Home</a><span style="color:#949494">/</span><a href="#/listing" style="color:#034592">Special offers</a><span style="color:#949494">/</span><span style="color:#6B6B6B">Winter Sale</span></nav>
+</div>
+<div style="position:relative;height:520px;background:#034592;overflow:hidden">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" src="https://s7g10.scene7.com/is/image/stena/AdobeStock_641410334_1?wid=1440" alt="" dc-props="{{ fill }}" hint-size="100%,520px"></x-import>
+<div style="position:absolute;inset:0;background:linear-gradient(195deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.8) 100%)"></div>
+<div style="position:absolute;left:max(24px, calc(50% - 570px));right:max(24px, calc(50% - 570px));bottom:120px;display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+<x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="warning" size="md" text="Sale ends Sun 1 Nov · 12 days left" hint-size="auto,24px"></x-import>
+<h1 style="font:700 56px/64px var(--font-sans);margin:0;color:#fff;letter-spacing:-.01em">Winter Sale</h1>
+<p style="font:400 20px/30px var(--font-sans);margin:0;color:#fff;max-width:640px;text-wrap:pretty">Four ways to save on Harwich – Hook of Holland this winter. Pick a deal, choose your dates and the offer code is applied for you.</p>
+</div>
+</div>
+<div style="width:min(1140px, calc(100% - 48px));margin:-80px auto 0;position:relative;background:#fff;border-radius:16px;padding:24px;box-sizing:border-box;box-shadow:0 4px 20px rgba(0,0,0,.16);display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+<h2 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A">Find your trip</h2>
+<span style="font:400 14px/21px var(--font-sans);color:#6B6B6B">Economy, Flexi and Premium fares · new bookings only</span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px">
+<sc-for list="{{ ed.tiles }}" as="p" hint-placeholder-count="4">
+<div onClick="{{ p.onClick }}" style="cursor:pointer;border-radius:16px;padding:16px;display:flex;gap:4px;align-items:flex-start;background:{{ p.bg }};box-shadow:{{ p.ring }};transition:box-shadow 120ms, background-color 120ms">
+<x-import component-from-global-scope="DesignSystem_e25ee1.RadiobuttonWebui" selected="{{ p.radio }}" text1="{{ nbsp }}" hint-size="32px,24px"></x-import>
+<div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:0">
+<span style="font:500 16px/24px var(--font-sans);color:#1A1A1A">{{ p.name }}</span>
+<span style="font:400 14px/21px var(--font-sans);color:#6B6B6B">{{ p.valid }}</span>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:24px">
+<x-import component-from-global-scope="DesignSystem_e25ee1.RadiobuttonWebui" selected="yes" text1="Return trip" hint-size="auto,24px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.RadiobuttonWebui" selected="no" text1="One way" hint-size="auto,24px"></x-import>
+</div>
+<div style="display:flex;gap:16px;align-items:center">
+<x-import component-from-global-scope="DesignSystem_e25ee1.FindBookDestinationSelector" type="route" text1="Route" text2="Harwich – Hook of Holland" dc-props="{{ fRoute }}" hint-size="370px,72px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.FindBookDateSelector" type="return" text1="Outward date" text2="Select date" text3="Return date" text4="Select date" dc-props="{{ fDates }}" hint-size="470px,72px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" colour="red" size="larger" text="Search trip" href="{{ ed.searchHref }}" dc-props="{{ wGrow }}" hint-size="220px,72px"></x-import>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px;font:400 14px/21px var(--font-sans);color:#333">
+<x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="success" size="sm" text="{{ ed.codeTag }}" hint-size="auto,24px"></x-import>
+<span>Applied automatically. No need to type it at checkout.</span>
+</div>
+</div>
+<div style="width:min(1140px, calc(100% - 48px));margin:48px auto 0;display:flex;align-items:center;gap:32px;padding:0 0 24px;border-bottom:1px solid #EBEBEB">
+<span style="font:700 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#6B6B6B;white-space:nowrap">In this sale</span>
+<sc-for list="{{ ed.index }}" as="c" hint-placeholder-count="4">
+<div style="display:flex;gap:10px;align-items:baseline;font:500 16px/24px var(--font-sans);color:#1A1A1A"><span style="font:400 14px/21px var(--font-sans);color:#034592">{{ c.num }}</span><span>{{ c.name }}</span></div>
+</sc-for>
+</div>
+<sc-for list="{{ ed.chapters }}" as="c" hint-placeholder-count="4">
+<section style="background:{{ c.bg }};padding:80px 0">
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;align-items:center">
+<div style="order:{{ c.imgOrder }};border-radius:24px;overflow:hidden;background:#EBEBEB"><x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" aspect-ratio="4:3" src="{{ c.imgBig }}" alt="" hint-size="100%,400px"></x-import></div>
+<div style="order:1;display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+<span style="font:700 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#034592">{{ c.num }} · {{ c.valid }}</span>
+<h2 style="font:700 40px/48px var(--font-sans);margin:0;color:#1A1A1A;text-wrap:pretty">{{ c.title }}</h2>
+<p style="font:400 18px/27px var(--font-sans);margin:0;color:#333;text-wrap:pretty">{{ c.desc }}</p>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px">
+<sc-for list="{{ c.points }}" as="i" hint-placeholder-count="3">
+<li style="display:flex;gap:12px;align-items:flex-start;font:400 16px/24px var(--font-sans);color:#1A1A1A"><span style="width:24px;height:24px;border-radius:12px;background:#D7F0CF;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:#1C5E38"><x-import component-from-global-scope="DesignSystem_e25ee1.Icon" name="CheckThick" size="{{ 14 }}" hint-size="14px,14px"></x-import></span><span>{{ i.text }}</span></li>
+</sc-for>
+</ul>
+<div style="display:flex;align-items:center;gap:20px;padding-top:8px">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="{{ c.btnType }}" size="lg" text="{{ c.btnLabel }}" onClick="{{ c.onClick }}" hint-size="auto,48px"></x-import>
+<span style="font:700 18px/27px var(--font-sans);color:#1A1A1A">{{ c.from }}</span>
+</div>
+</div>
+</div>
+</section>
+</sc-for>
+<section style="padding:80px 0 96px;background:#fff">
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:8px"><h2 style="font:700 32px/40px var(--font-sans);margin:0;color:#1A1A1A">Which deal fits your trip?</h2><span style="font:400 16px/24px var(--font-sans);color:#333">One offer per booking. Pick the column that matches how you travel.</span></div>
+<div style="display:grid;grid-template-columns:200px repeat(4,minmax(0,1fr));border:1px solid #EBEBEB;border-radius:24px;overflow:hidden">
+<div style="padding:20px 24px;background:#F4F4F4"></div>
+<sc-for list="{{ ed.compareHead }}" as="hd" hint-placeholder-count="4">
+<div style="padding:20px 24px;background:{{ hd.bg }};font:500 18px/27px var(--font-sans);color:#1A1A1A">{{ hd.name }}</div>
+</sc-for>
+<sc-for list="{{ ed.compareRows }}" as="r" hint-placeholder-count="4">
+<div style="display:contents">
+<div style="padding:16px 24px;border-top:1px solid #EBEBEB;font:500 16px/24px var(--font-sans);color:#1A1A1A">{{ r.label }}</div>
+<sc-for list="{{ r.cells }}" as="cell" hint-placeholder-count="4">
+<div style="padding:16px 24px;border-top:1px solid #EBEBEB;font:400 16px/24px var(--font-sans);color:#333;background:{{ cell.bg }}">{{ cell.text }}</div>
+</sc-for>
+</div>
+</sc-for>
+<div style="padding:16px 24px;border-top:1px solid #EBEBEB"></div>
+<sc-for list="{{ ed.compareBtns }}" as="b" hint-placeholder-count="4">
+<div style="padding:16px 24px;border-top:1px solid #EBEBEB;background:{{ b.bg }}"><x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="{{ b.btnType }}" size="md" text="{{ b.btnLabel }}" onClick="{{ b.onClick }}" hint-size="auto,36px"></x-import></div>
+</sc-for>
+</div>
+</div>
+</section>
+<div style="position:relative;background:#fff">
+<div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
+<x-import component-from-global-scope="DesignSystem_e25ee1.FooterWeb" device="desktop" open="n/a" dc-props="{{ wFull }}" hint-size="100%,680px"></x-import>
+</div>
+
+</div>
+</sc-if>
+<sc-if value="{{ pg.editorial }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="2a Editorial with deal bar" style="background:#fff">
+
+<x-import component-from-global-scope="DesignSystem_e25ee1.HeaderWeb" version="desktop" dc-props="{{ wFull }}" hint-size="100%,108px"></x-import>
+<div style="position:relative;height:640px;background:#034592;overflow:hidden">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" src="https://s7g10.scene7.com/is/image/stena/AdobeStock_641410334_1?wid=1440" alt="" dc-props="{{ fill }}" hint-size="100%,640px"></x-import>
+<div style="position:absolute;inset:0;background:linear-gradient(195deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.8) 100%)"></div>
+<div style="position:absolute;left:max(24px, calc(50% - 570px));right:max(24px, calc(50% - 570px));bottom:72px;display:flex;justify-content:space-between;align-items:flex-end;gap:64px">
+<div style="display:flex;flex-direction:column;gap:16px;align-items:flex-start;max-width:720px">
+<x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="warning" size="md" text="Sale ends Sun 1 Nov · 12 days left" hint-size="auto,24px"></x-import>
+<h1 style="font:700 64px/72px var(--font-sans);margin:0;color:#fff;letter-spacing:-.01em">Winter Sale</h1>
+<p style="font:400 20px/30px var(--font-sans);margin:0;color:#fff;max-width:600px;text-wrap:pretty">Four ways to save on Harwich – Hook of Holland this winter. Read on, pick your deal and the offer code is applied for you.</p>
+</div>
+<ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;min-width:280px">
+<sc-for list="{{ ed.index }}" as="c" hint-placeholder-count="4">
+<li style="display:flex;gap:16px;align-items:baseline;padding:10px 0;border-top:1px solid rgba(255,255,255,.35);font:500 16px/24px var(--font-sans);color:#fff"><span style="font:400 14px/21px var(--font-sans);color:#fff;min-width:24px">{{ c.num }}</span><span>{{ c.name }}</span></li>
+</sc-for>
+</ol>
+</div>
+</div>
+<div style="background:#fff;border-bottom:1px solid #EBEBEB;box-shadow:0 1px 8px rgba(0,0,0,.06);position:sticky;top:0;z-index:5">
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;height:88px;display:flex;align-items:center;gap:24px">
+<span style="font:700 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#6B6B6B;white-space:nowrap">Your deal</span>
+<span style="font:500 20px/30px var(--font-sans);color:#1A1A1A">{{ ed.name }}</span>
+<x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="success" size="sm" text="{{ ed.codeTag }}" hint-size="auto,24px"></x-import>
+<div style="flex:1"></div>
+<span style="font:400 14px/21px var(--font-sans);color:#6B6B6B">{{ ed.valid }}</span>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" colour="red" size="lg" text="Search trip" href="{{ ed.searchHref }}" hint-size="auto,48px"></x-import>
+</div>
+</div>
+<sc-for list="{{ ed.chapters }}" as="c" hint-placeholder-count="4">
+<section style="background:{{ c.bg }};padding:96px 0">
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;align-items:center">
+<div style="order:{{ c.imgOrder }};border-radius:24px;overflow:hidden;background:#EBEBEB"><x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" aspect-ratio="4:3" src="{{ c.imgBig }}" alt="" hint-size="100%,400px"></x-import></div>
+<div style="order:1;display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+<span style="font:700 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#034592">{{ c.num }} · {{ c.valid }}</span>
+<h2 style="font:700 40px/48px var(--font-sans);margin:0;color:#1A1A1A;text-wrap:pretty">{{ c.title }}</h2>
+<p style="font:400 18px/27px var(--font-sans);margin:0;color:#333;text-wrap:pretty">{{ c.desc }}</p>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px">
+<sc-for list="{{ c.points }}" as="i" hint-placeholder-count="3">
+<li style="display:flex;gap:12px;align-items:flex-start;font:400 16px/24px var(--font-sans);color:#1A1A1A"><span style="width:24px;height:24px;border-radius:12px;background:#D7F0CF;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:#1C5E38"><x-import component-from-global-scope="DesignSystem_e25ee1.Icon" name="CheckThick" size="{{ 14 }}" hint-size="14px,14px"></x-import></span><span>{{ i.text }}</span></li>
+</sc-for>
+</ul>
+<div style="display:flex;align-items:center;gap:20px;padding-top:8px">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="{{ c.btnType }}" size="lg" text="{{ c.btnLabel }}" onClick="{{ c.onClick }}" hint-size="auto,48px"></x-import>
+<span style="font:700 18px/27px var(--font-sans);color:#1A1A1A">{{ c.from }}</span>
+</div>
+</div>
+</div>
+</section>
+</sc-for>
+<section style="padding:96px 0;background:#fff">
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:8px"><h2 style="font:700 32px/40px var(--font-sans);margin:0;color:#1A1A1A">Which deal fits your trip?</h2><span style="font:400 16px/24px var(--font-sans);color:#333">One offer per booking. Pick the column that matches how you travel.</span></div>
+<div style="display:grid;grid-template-columns:200px repeat(4,minmax(0,1fr));border:1px solid #EBEBEB;border-radius:24px;overflow:hidden">
+<div style="padding:20px 24px;background:#F4F4F4"></div>
+<sc-for list="{{ ed.compareHead }}" as="hd" hint-placeholder-count="4">
+<div style="padding:20px 24px;background:{{ hd.bg }};font:500 18px/27px var(--font-sans);color:#1A1A1A">{{ hd.name }}</div>
+</sc-for>
+<sc-for list="{{ ed.compareRows }}" as="r" hint-placeholder-count="4">
+<div style="display:contents">
+<div style="padding:16px 24px;border-top:1px solid #EBEBEB;font:500 16px/24px var(--font-sans);color:#1A1A1A">{{ r.label }}</div>
+<sc-for list="{{ r.cells }}" as="cell" hint-placeholder-count="4">
+<div style="padding:16px 24px;border-top:1px solid #EBEBEB;font:400 16px/24px var(--font-sans);color:#333;background:{{ cell.bg }}">{{ cell.text }}</div>
+</sc-for>
+</div>
+</sc-for>
+<div style="padding:16px 24px;border-top:1px solid #EBEBEB"></div>
+<sc-for list="{{ ed.compareBtns }}" as="b" hint-placeholder-count="4">
+<div style="padding:16px 24px;border-top:1px solid #EBEBEB;background:{{ b.bg }}"><x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="{{ b.btnType }}" size="md" text="{{ b.btnLabel }}" onClick="{{ b.onClick }}" hint-size="auto,36px"></x-import></div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<div style="background:#F4F4F4;padding:64px 0">
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;background:#fff;border-radius:16px;padding:24px;box-sizing:border-box;box-shadow:0 4px 20px rgba(0,0,0,.16);display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+<h2 style="font:500 20px/30px var(--font-sans);margin:0;color:#1A1A1A">Find your trip</h2>
+<span style="font:400 14px/21px var(--font-sans);color:#6B6B6B">{{ ed.name }} · {{ ed.valid }}</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:24px">
+<x-import component-from-global-scope="DesignSystem_e25ee1.RadiobuttonWebui" selected="yes" text1="Return trip" hint-size="auto,24px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.RadiobuttonWebui" selected="no" text1="One way" hint-size="auto,24px"></x-import>
+</div>
+<div style="display:flex;gap:16px;align-items:center">
+<x-import component-from-global-scope="DesignSystem_e25ee1.FindBookDestinationSelector" type="route" text1="Route" text2="Harwich – Hook of Holland" dc-props="{{ fRoute }}" hint-size="370px,72px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.FindBookDateSelector" type="return" text1="Outward date" text2="Select date" text3="Return date" text4="Select date" dc-props="{{ fDates }}" hint-size="470px,72px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" colour="red" size="larger" text="Search trip" href="{{ ed.searchHref }}" dc-props="{{ wGrow }}" hint-size="220px,72px"></x-import>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px;font:400 14px/21px var(--font-sans);color:#333">
+<x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="success" size="sm" text="{{ ed.codeTag }}" hint-size="auto,24px"></x-import>
+<span>Applied automatically. No need to type it at checkout.</span>
+</div>
+</div>
+</div>
+
+<div style="position:relative;background:#fff">
+<div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
+<div style="position:relative;background:#fff">
+<div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
+<x-import component-from-global-scope="DesignSystem_e25ee1.FooterWeb" device="desktop" open="n/a" dc-props="{{ wFull }}" hint-size="100%,680px"></x-import>
+</div>
+</div>
+
+</div>
+</sc-if>
+<sc-if value="{{ pg.mobile }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="1d Mobile cruise hub" style="background:#fff">
+<div style="background:#F4F4F4;padding:48px 0;display:flex;justify-content:center">
+<div style="width:375px;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.16)">
+
+<div style="width:375px;height:64px;background:#fff;border-bottom:1px solid #EBEBEB;display:flex;justify-content:space-between;align-items:center;padding:0 4px;box-sizing:border-box">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="flat" size="lg" text="Menu" hint-size="auto,48px"></x-import>
+<img src="assets/logo-stena-line.svg" alt="Stena Line" style="width:100px;height:34px;display:block">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="flat" size="lg" text="Log in" hint-size="auto,48px"></x-import>
+</div>
+<div style="position:relative;height:260px;background:#EBEBEB;overflow:hidden">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" src="https://s7g10.scene7.com/is/image/stena/StenaLine_Web_3840x2160_EastAutumnSale?wid=800" alt="" dc-props="{{ fill }}" hint-size="100%,260px"></x-import>
+<div style="position:absolute;inset:0;background:linear-gradient(195deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.8) 100%)"></div>
+<div style="position:absolute;left:16px;right:16px;bottom:56px;color:#fff;display:flex;flex-direction:column;gap:6px">
+<span style="font:700 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase">Gdynia – Karlskrona · Stena Spirit</span>
+<h1 style="font:700 28px/36px var(--font-sans);margin:0;color:#fff">Cruises to Sweden</h1>
+</div>
+</div>
+<div style="margin:-40px 16px 0;position:relative;background:#fff;border-radius:16px;padding:16px;box-sizing:border-box;box-shadow:0 4px 20px rgba(0,0,0,.16);display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;flex-direction:column;gap:2px"><h2 style="font:500 18px/27px var(--font-sans);margin:0;color:#1A1A1A">Find your trip</h2><span style="font:400 14px/21px var(--font-sans);color:#6B6B6B">Prices per person · cabin included where stated</span></div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{ m.products }}" as="p" hint-placeholder-count="2">
+<div onClick="{{ p.onClick }}" style="cursor:pointer;border-radius:12px;padding:12px;display:flex;gap:4px;align-items:flex-start;background:{{ p.bg }};box-shadow:{{ p.ring }}">
+<x-import component-from-global-scope="DesignSystem_e25ee1.RadiobuttonWebui" selected="{{ p.radio }}" text1="{{ nbsp }}" hint-size="32px,24px"></x-import>
+<div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:0">
+<div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px"><span style="font:500 16px/24px var(--font-sans);color:#1A1A1A">{{ p.name }}</span><span style="font:700 14px/21px var(--font-sans);color:#1A1A1A;white-space:nowrap">{{ p.from }}</span></div>
+<span style="font:400 14px/21px var(--font-sans);color:#333">{{ p.desc }}</span>
+</div>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;gap:24px">
+<x-import component-from-global-scope="DesignSystem_e25ee1.RadiobuttonWebui" selected="yes" text1="Return trip" hint-size="auto,24px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.RadiobuttonWebui" selected="no" text1="One way" hint-size="auto,24px"></x-import>
+</div>
+<x-import component-from-global-scope="DesignSystem_e25ee1.FindBookDestinationSelector" type="locked route" text1="Route" text2="Gdynia – Karlskrona" hint-size="311px,69px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.FindBookDateSelector" type="return" text1="Outward date" text2="{{ m.outText }}" text3="Return date" text4="{{ m.homeText }}" hint-size="311px,69px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" colour="red" size="lg" text="Search trip" href="{{ m.searchHref }}" dc-props="{{ wFull }}" hint-size="311px,48px"></x-import>
+<div style="display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap;font:400 14px/21px var(--font-sans);color:#333">
+<x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="{{ m.tagType }}" size="sm" text="{{ m.tagText }}" hint-size="auto,24px"></x-import>
+<span>{{ m.hint }}</span>
+</div>
+</div>
+
+<div style="padding:32px 16px 0;display:flex;flex-direction:column;gap:12px">
+<h2 style="font:700 22px/30px var(--font-sans);margin:0;color:#1A1A1A">{{ m.includedTitle }}</h2>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px">
+<sc-for list="{{ m.included }}" as="i" hint-placeholder-count="4">
+<li style="display:flex;gap:12px;align-items:flex-start;font:400 16px/24px var(--font-sans);color:#1A1A1A"><span style="width:24px;height:24px;border-radius:12px;background:#D7F0CF;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;color:#1C5E38"><x-import component-from-global-scope="DesignSystem_e25ee1.Icon" name="CheckThick" size="{{ 14 }}" hint-size="14px,14px"></x-import></span><span>{{ i.text }}</span></li>
+</sc-for>
+</ul>
+</div>
+
+<div style="background:#F4F4F4;margin-top:32px;padding:32px 0">
+<div style="padding:0 16px;display:flex;flex-direction:column;gap:4px">
+<h2 style="font:700 22px/30px var(--font-sans);margin:0;color:#1A1A1A">Themed sailings</h2>
+<span style="font:400 14px/21px var(--font-sans);color:#333">Pick a departure to book it straight away.</span>
+</div>
+<div style="display:flex;gap:4px;padding:4px;margin:16px 16px 0;border-radius:12px;box-shadow:inset 0 0 0 2px #EBEBEB;background:#fff;flex-wrap:wrap">
+<sc-for list="{{ m.months }}" as="mo" hint-placeholder-count="4">
+<button onClick="{{ mo.onClick }}" style="appearance:none;border:0;margin:0;cursor:pointer;border-radius:8px;padding:10px 10px;font:500 14px/21px var(--font-sans);color:#1A1A1A;white-space:nowrap;background:{{ mo.bg }}">{{ mo.label }}</button>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;padding:16px 16px 0">
+<sc-for list="{{ m.themes }}" as="t" hint-placeholder-count="2">
+<div style="display:flex;flex-direction:column;background:#fff;border-radius:24px;overflow:hidden;box-shadow:inset 0 0 0 1px #EBEBEB">
+<div style="position:relative">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ImageHelper" aspect-ratio="16:9" src="{{ t.img }}" alt="" hint-size="100%,200px"></x-import>
+<div style="position:absolute;left:16px;top:16px"><x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="default" strong="{{ true }}" size="sm" text="{{ t.variants }}" hint-size="auto,24px"></x-import></div>
+</div>
+<div style="padding:16px;display:flex;flex-direction:column;gap:12px">
+<h3 style="font:500 18px/27px var(--font-sans);margin:0;color:#1A1A1A">{{ t.title }}</h3>
+<p style="font:400 14px/21px var(--font-sans);margin:0;color:#333">{{ t.desc }}</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{ t.chips }}" as="c" hint-placeholder-count="2">
+<a href="{{ c.href }}" onClick="{{ c.onClick }}" style="display:inline-flex;align-items:center;height:44px;padding:0 16px;border-radius:108px;font:500 14px/21px var(--font-sans);text-decoration:none;box-shadow:inset 0 0 0 1px #034592;background:{{ c.bg }};color:{{ c.fg }};opacity:{{ c.opacity }}">{{ c.label }}</a>
+</sc-for>
+</div>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="secondary" size="lg" text="{{ t.bookLabel }}" href="{{ t.bookHref }}" dc-props="{{ wFull }}" hint-size="100%,48px"></x-import>
+</div>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="padding:32px 16px 0;display:flex;flex-direction:column;gap:16px">
+<div style="background:#fff;border-radius:24px;box-shadow:inset 0 0 0 1px #EBEBEB;padding:16px;display:flex;flex-direction:column;gap:12px">
+<h2 style="font:500 18px/27px var(--font-sans);margin:0;color:#1A1A1A">{{ m.pricesTitle }}</h2>
+<div style="display:flex;flex-direction:column">
+<sc-for list="{{ m.prices }}" as="r" hint-placeholder-count="3">
+<div style="display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid #EBEBEB;font:400 16px/24px var(--font-sans);color:#1A1A1A"><span>{{ r.label }}</span><span style="font-weight:700">{{ r.price }}</span></div>
+</sc-for>
+</div>
+</div>
+<div style="background:#fff;border-radius:24px;box-shadow:inset 0 0 0 1px #EBEBEB;padding:16px;display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+<h2 style="font:500 18px/27px var(--font-sans);margin:0;color:#1A1A1A">Terms and conditions</h2>
+<ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px">
+<sc-for list="{{ m.tc }}" as="x" hint-placeholder-count="2"><li style="font:400 14px/21px var(--font-sans);color:#333">{{ x.text }}</li></sc-for>
+</ul>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="flat" size="md" text="{{ m.tcLabel }}" onClick="{{ m.tcToggle }}" hint-size="auto,36px"></x-import>
+</div>
+</div>
+<div style="margin-top:32px;background:#034592;color:#fff;padding:24px 16px;display:flex;flex-direction:column">
+<sc-for list="{{ footerGroups }}" as="g" hint-placeholder-count="5">
+<div style="display:flex;justify-content:space-between;align-items:center;min-height:48px;border-bottom:1px solid rgba(255,255,255,.24);font:500 16px/24px var(--font-sans);color:#fff"><span>{{ g.label }}</span><span style="display:inline-flex;color:#fff"><x-import component-from-global-scope="DesignSystem_e25ee1.Icon" name="AngleDown" size="{{ 20 }}" hint-size="20px,20px"></x-import></span></div>
+</sc-for>
+<div style="display:flex;flex-direction:column;gap:12px;padding-top:24px"><img src="assets/logo-stena-line-white.svg" alt="Stena Line" style="width:120px;display:block"><span style="font:400 14px/21px var(--font-sans);color:#fff">Copyright Stena Line 2026</span></div>
+</div>
+
+</div>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ pg.booking }}" hint-placeholder-val="{{ false }}">
+<div data-screen-label="Booking stub" style="background:#fff">
+<x-import component-from-global-scope="DesignSystem_e25ee1.HeaderWeb" version="desktop" dc-props="{{ wFull }}" hint-size="100%,108px"></x-import>
+<div style="width:min(1140px, calc(100% - 48px));margin:0 auto;padding:16px 0">
+<nav aria-label="Breadcrumb" style="display:flex;align-items:center;gap:8px;font:400 14px/21px var(--font-sans);color:#333"><a href="#/" style="color:#034592">Home</a><span style="color:#949494">/</span><a href="#/listing" style="color:#034592">Special offers</a><span style="color:#949494">/</span><span style="color:#6B6B6B">Booking</span></nav>
+</div>
+<div style="width:min(760px, calc(100% - 48px));margin:40px auto 96px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:8px">
+<x-import component-from-global-scope="DesignSystem_e25ee1.TagWebui" type="default" strong="{{ true }}" size="sm" text="Prototype stub" hint-size="auto,24px"></x-import>
+<h1 style="font:700 32px/40px var(--font-sans);margin:0;color:#1A1A1A">Booking would start here</h1>
+<p style="font:400 16px/24px var(--font-sans);margin:0;color:#333">This is what the offer page hands to the booking flow. Nothing is booked in the prototype.</p>
+</div>
+<div style="background:#fff;border-radius:24px;box-shadow:inset 0 0 0 1px #EBEBEB;padding:8px 24px;display:flex;flex-direction:column">
+<sc-for list="{{ bk.rows }}" as="r" hint-placeholder-count="4">
+<div style="display:grid;grid-template-columns:200px minmax(0,1fr);gap:16px;padding:14px 0;border-top:1px solid #EBEBEB;font:400 16px/24px var(--font-sans)"><span style="color:#6B6B6B">{{ r.label }}</span><span style="color:#1A1A1A;font-weight:500">{{ r.value }}</span></div>
+</sc-for>
+</div>
+<div style="background:#F4F4F4;border-radius:16px;padding:16px 20px;display:flex;flex-direction:column;gap:4px">
+<span style="font:700 12px/18px var(--font-sans);letter-spacing:.5px;text-transform:uppercase;color:#6B6B6B">Handoff URL</span>
+<span style="font:400 14px/21px ui-monospace, Menlo, monospace;color:#333;word-break:break-all">{{ bk.url }}</span>
+</div>
+<div style="display:flex;gap:16px">
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="primary" colour="blue" size="lg" text="Back to the offer" onClick="{{ goBack }}" hint-size="auto,48px"></x-import>
+<x-import component-from-global-scope="DesignSystem_e25ee1.ButtonsWebui" type="flat" size="lg" text="All variants" href="#/" hint-size="auto,48px"></x-import>
+</div>
+</div>
+<div style="position:relative;background:#fff">
+<div style="position:absolute;left:0;right:0;top:0;height:62px;z-index:2;pointer-events:none;background:#fff url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 288 24'%3E%3Cpath d='M0 12C48 0 96 0 144 12S240 24 288 12V24H0Z' fill='%23034592'/%3E%3C/svg%3E&quot;) repeat-x left bottom;background-size:288px 24px"></div>
+<x-import component-from-global-scope="DesignSystem_e25ee1.FooterWeb" device="desktop" open="n/a" dc-props="{{ wFull }}" hint-size="100%,680px"></x-import>
+</div>
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const S7 = 'https://s7g10.scene7.com/is/image/stena/';
+const TEASER = ':Special-Offer-Teaser-List-Item';
+const OFFERS = [
+  { id: 'north-sea-autumn', tags: ['Discount'], region: 'Holland', route: 'Harwich – Hook of Holland', title: 'Save 15% on your autumn getaway to Holland', teaser: 'Ship out from Harwich to Hook of Holland for less this autumn with 15% off fares.', price: '15% off', valid: 'Book by 31 Oct', cta: 'Explore Holland', img: S7 + '020925D_STENA_LINE_1466' + TEASER, ending: true, href: '#1c' },
+  { id: 'caravan-irish-sea', tags: ['Discount'], region: 'Irish Sea', route: 'Ireland – Britain', title: 'Save up to 50% when you take your caravan to Ireland or Britain', teaser: 'Save up to 50% on your caravan supplement to Ireland or Britain.', price: 'Up to 50% off', valid: 'Selected sailings', cta: 'Take your caravan', img: S7 + '20200921_caravan-family-dog' + TEASER, href: '#' },
+  { id: 'short-stay-20', tags: ['Discount'], region: 'Holland', route: 'Harwich – Hook of Holland', title: 'Good news! Our 20% off short-stay-getaway deal is back', teaser: 'Stay up to five days and save 20% on return fares to Holland.', price: '20% off fares', valid: 'Until 31 Mar 2027', cta: 'Explore Holland', img: S7 + 'AdobeStock_641410334_1' + TEASER, href: '#1c' },
+  { id: 'motorhome-irish-sea', tags: ['Discount'], region: 'Irish Sea', route: 'Ireland – Britain', title: 'Save big when you take your motorhome to Ireland from Britain', teaser: 'Save big when you travel with your motorhome on selected sailings.', price: 'Big savings', valid: 'Selected sailings', cta: 'Take your motorhome', img: S7 + 'adobestock_170544398' + TEASER, href: '#' },
+  { id: 'short-stay-car', tags: ['Discount'], region: 'Irish Sea', route: 'Ireland – Britain', title: 'Short Stay by Car – save up to 25%', teaser: 'Enjoy a mini car-cation from just £177 return, car + driver.', price: 'from £177 return', valid: 'Car + driver', cta: 'Learn more', img: S7 + 'AdobeStock_266677855' + TEASER, href: '#' },
+  { id: 'caravans-free-holland', tags: ['Discount'], region: 'Holland', route: 'Harwich – Hook of Holland', title: 'Caravans can go free to Holland', teaser: 'Caravans travel for free on selected departures to Holland.', price: 'Caravan £0', valid: 'Selected departures', cta: 'Book your caravan', img: S7 + 'adobestock_662550435' + TEASER, href: '#1c' },
+  { id: 'motorhome-holland', tags: ['Discount'], region: 'Holland', route: 'Harwich – Hook of Holland', title: 'Save when you take your motorhome to Holland from England', teaser: 'Save big with your motorhome on selected sailings to Holland.', price: 'Big savings', valid: 'Selected sailings', cta: 'Book your motorhome', img: S7 + '20220306-couple-chilling-caravaning' + TEASER, href: '#' },
+  { id: 'cabins-50', tags: ['Discount'], region: 'Holland', route: 'Harwich – Hook of Holland', title: 'Get 50% off cabins on day sailings from Harwich to Hook of Holland', teaser: 'Arrive relaxed and refreshed in a luxurious en-suite cabin.', price: '50% off cabins', valid: 'Day sailings', cta: 'Save up to 50%', img: S7 + '20220209_Stena_Hollandica_Britanica_Premium_Cabins_2' + TEASER, href: '#1c' },
+  { id: 'festive-duty-free', tags: ['Day trip'], region: 'Irish Sea', route: 'Holyhead – Dublin', title: 'Set sail for Christmas savings', teaser: 'Christmas shopping at sea: live entertainment, time in Dublin and Duty Free deals.', price: '£25 return', valid: 'Nov – Dec', cta: 'Sail and stock up', img: S7 + 'Duty_free_christmas_festive_shopping_on_board_1' + TEASER, href: '#' },
+  { id: 'day-trip-belfast', tags: ['Day trip'], region: 'Irish Sea', route: 'Cairnryan – Belfast', title: 'Day trip to Belfast', teaser: 'A one-day getaway with a choice of sailings and time to shop or see the city.', price: 'from £20 return', valid: 'Year round', cta: 'Read more', img: S7 + 'AdobeStock_229653634' + TEASER, href: '#' },
+  { id: 'big-day-out', tags: ['Theme cruise', 'Day trip'], region: 'Irish Sea', route: 'Belfast – Cairnryan', title: 'It’s the BIG DAY OUT cruise!', teaser: 'A hosted day of bingo, games, music and old-school entertainment at sea.', price: '£19 per adult', valid: '20 Oct, 3 Nov & 9 Feb', cta: 'Find out more', img: S7 + '20261603_the_big_day_out_cruise_bingo_3_v2' + TEASER, href: '#1b' },
+  { id: 'glasgow', tags: ['Day trip'], region: 'Irish Sea', route: 'Belfast – Cairnryan', title: 'Coach day trip to Glasgow from £35 return', teaser: 'Return ferry, coach transfers to the city centre and an onboard shop voucher.', price: 'from £35 return', valid: 'Selected dates', cta: 'Find out more', img: S7 + '20140415_glasgow-armadillo' + TEASER, href: '#' },
+  { id: 'duty-free-10', tags: ['Day trip'], region: 'Irish Sea', route: 'Holyhead – Dublin · Fishguard – Rosslare', title: 'Duty Free Day Trips from only £10', teaser: 'Bag a bargain from over 450 premium brands in our Duty-Free Shop.', price: 'from £10', valid: 'Year round', cta: 'Book a Duty Free trip', img: S7 + '20250227_spring_campaign_shopping' + TEASER, href: '#' },
+  { id: 'jazz', tags: ['Theme cruise', 'Day trip'], region: 'Irish Sea', route: 'Belfast – Cairnryan', title: 'Jazz Day Cruise from Belfast', teaser: 'Jazz and swing classics from Sinatra to Bublé, performed by the Jazzmeisters.', price: '£19 per adult', valid: '7 Nov & 30 Jan', cta: 'Book now', img: S7 + 'jazz_cruise' + TEASER, href: '#1b' },
+  { id: 'pirates', tags: ['Theme cruise', 'Day trip'], region: 'Irish Sea', route: 'Belfast – Cairnryan', title: 'Pirates & Princesses Day Cruise', teaser: 'A non-landing kids’ cruise with a day of non-stop fun for your little ones.', price: '£19 per adult', valid: 'Feb – Apr dates', cta: 'Book now', img: S7 + 'pirates_princesses_cruise_2' + TEASER, href: '#1b' },
+  { id: 'bjorn', tags: ['Theme cruise', 'Day trip'], region: 'Irish Sea', route: 'Belfast – Cairnryan', title: 'The Bjorn Identity: 70s Pop Party at Sea', teaser: 'A feel-good trip back to the ’70s with The Bjorn Identity and the music of ABBA.', price: '£19 per adult', valid: '13 Nov & 6 Feb', cta: 'Book now', img: S7 + 'bjorn_again_web_image_2' + TEASER, href: '#1b' },
+  { id: 'festive-family', tags: ['Theme cruise', 'Day trip'], region: 'Irish Sea', route: 'Belfast – Cairnryan', title: 'Festive Family Fun Cruise', teaser: 'Six hours of festive fun: music, magic, puppet shows, games and dancing.', price: '£19 per adult', valid: 'Six dates Nov – Dec', cta: 'Book now', img: S7 + '030925d-stena-line-2800-with-christmas-decorations-upscaled' + TEASER, href: '#1b' },
+  { id: '80s', tags: ['Theme cruise', 'Day trip'], region: 'Irish Sea', route: 'Belfast – Cairnryan', title: 'The Stena Line Rewind – Back to the 80s', teaser: 'Iconic ’80s music at sea with two tribute acts, Hot Gossip and Madonna.', price: '£19 per adult', valid: '29 Nov', cta: 'Book now', img: S7 + '20261008_Girls_dancing_under_lights' + TEASER, href: '#1b' },
+  { id: 'bingo', tags: ['Theme cruise', 'Day trip'], region: 'Irish Sea', route: 'Belfast – Cairnryan', title: 'Bingo Bonanza Cruise', teaser: 'Traditional and musical bingo, fantastic prizes and plenty of laughs at sea.', price: '£19 per adult', valid: '19 Jan', cta: 'Book now', img: S7 + 'quiz-music-bingo-2' + TEASER, href: '#1b' },
+  { id: 'nashville', tags: ['Theme cruise', 'Day trip'], region: 'Irish Sea', route: 'Belfast – Cairnryan', title: 'Stena Line Nashville at Sea Cruise', teaser: 'Country anthems with The Luke Combs Experience: Noel Boland and a live band.', price: '£19 per adult', valid: '7 Mar', cta: 'Book now', img: S7 + 'luke-combs-experience-1' + TEASER, href: '#1b' },
+  { id: 'winter-sale', tags: ['Sale', 'Discount'], region: 'Holland', route: 'Harwich – Hook of Holland', title: 'Winter Sale: four ways to save on Holland', teaser: '20% off short stays, free caravans, half-price cabins and 15% off autumn trips.', price: 'Four deals', valid: 'Ends Sun 1 Nov', cta: 'See the sale', img: S7 + '20220209_Stena_Hollandica_Britanica_Premium_Cabins_2' + TEASER, ending: true, href: '#1c' },
+];
+const FILTERS = [['all', 'All offers'], ['Discount', 'Discounts'], ['Day trip', 'Day trips'], ['Theme cruise', 'Theme cruises'], ['Sale', 'Sales']];
+const REGIONS = ['All routes', 'Holland', 'Irish Sea'];
+
+const PRODUCTS = [
+  { id: '24h', name: '24-hour cruise', code: 'CRUSKG1B', from: 'from 441 PLN', desc: 'Evening departure, a night in your cabin, back the next evening.', fixed: true,
+    included: ['Return crossing Gdynia – Karlskrona', 'Standard cabin with private bathroom', 'Breakfast and dinner buffets', 'Themed entertainment on event sailings'],
+    prices: [['Adult (16+)', 'from 441 PLN'], ['Child (4–15)', 'from 337 PLN'], ['Infant (0–3)', 'Free']] },
+  { id: '36h', name: '36-hour cruise', code: 'CRUSKG2B', from: 'from 589 PLN', desc: 'Two nights onboard with a full day in Karlskrona in between.', fixed: true,
+    included: ['Return crossing Gdynia – Karlskrona', 'Two nights in a Standard cabin', 'Two breakfast buffets and a dinner buffet', 'A day in Karlskrona · themed entertainment on event sailings'],
+    prices: [['Adult (16+)', 'from 589 PLN'], ['Child (4–15)', 'from 449 PLN'], ['Infant (0–3)', 'Free']] },
+];
+const MONTHS = [['all', 'All'], ['Oct', 'October'], ['Nov', 'November'], ['Dec', 'December']];
+const dep = (theme, label, out, home, homeLabel, p, m) => ({ id: theme + '-' + out + '-' + p, label, out, home, homeLabel, p, m });
+const THEMES = [
+  { id: 'halloween', title: 'Halloween Masquerade', img: S7 + 'StenaLine_Web_3840x2160_halloween_theme-cruise:16-9', desc: 'Dare to join a spooky Halloween cruise? Dance the night away at a disco full of ghosts and ghouls, then wake up to a monstrously good breakfast.',
+    deps: [dep('halloween', 'Sat 31 Oct', '2026-10-31', '2026-11-01', 'Sun 1 Nov', '24h', 'Oct')] },
+  { id: 'music', title: 'Music at Sea', img: S7 + 'StenaLine_Web_3840x2160_eurovision_themed-cruise_production_26:16-9', desc: 'A cruise filled with Europe’s greatest hits: live music and a special event buffet with drinks.',
+    deps: [dep('music', 'Fri 6 Nov', '2026-11-06', '2026-11-07', 'Sat 7 Nov', '24h', 'Nov'), dep('music', 'Sat 7 Nov', '2026-11-07', '2026-11-08', 'Sun 8 Nov', '24h', 'Nov')] },
+  { id: 'disco', title: 'Disco at Sea with FAAN', img: S7 + 'StenaLine_Web_3840x2160_FaanTribute_AbbaTheme-cruise:16-9', desc: 'A live concert by FAAN and the biggest Swedish hits in a vibrant disco atmosphere.',
+    deps: [dep('disco', 'Fri 13 Nov', '2026-11-13', '2026-11-14', 'Sat 14 Nov', '24h', 'Nov'), dep('disco', 'Sat 14 Nov', '2026-11-14', '2026-11-15', 'Sun 15 Nov', '24h', 'Nov')] },
+  { id: 'italo', title: 'Italo Disco at Sea', img: S7 + 'StenaLine_Italo_Disco_AIGeneratedImage' + TEASER, desc: 'The greatest Italian hits, live music, an event buffet with drinks and a dance floor full of energy. Choose a 24h or 36h cruise.',
+    deps: [dep('italo', 'Fri 20 Nov', '2026-11-20', '2026-11-21', 'Sat 21 Nov', '24h', 'Nov'), dep('italo', 'Fri 20 Nov', '2026-11-20', '2026-11-22', 'Sun 22 Nov', '36h', 'Nov')] },
+  { id: 'andrzejki', title: 'Andrzejki at Sea', img: S7 + '20151202_party-boat' + TEASER, desc: 'Live music, an event buffet with drinks and a dance floor full of fun on St Andrew’s Eve. Choose a 24h or 36h cruise.',
+    deps: [dep('andrzejki', 'Fri 27 Nov', '2026-11-27', '2026-11-28', 'Sat 28 Nov', '24h', 'Nov'), dep('andrzejki', 'Fri 27 Nov', '2026-11-27', '2026-11-29', 'Sun 29 Nov', '36h', 'Nov')] },
+  { id: 'santa', title: 'Santa Claus family cruise', img: S7 + 'Santa_Claus_Family_cruise_1' + TEASER, desc: 'Spend Mikołajki at sea: Mosaic Events animations, mini disco, family games, breakfast and lunch buffets and a night in a cabin.',
+    deps: [dep('santa', 'Sat 5 Dec', '2026-12-05', '2026-12-06', 'Sun 6 Dec', '24h', 'Dec')] },
+];
+const TC = [
+  'The offer applies to selected cruises on the Gdynia – Karlskrona route and is subject to availability.',
+  'The cruise includes return travel and accommodation in a selected cabin category. Breakfast is included where specified in the booking.',
+  'The offer is valid only on selected departure dates and sailings. Prices may vary depending on the departure date and cabin availability.',
+  'The offer cannot be combined with other discounts, promotions or special offers unless otherwise stated.',
+  'Passengers must carry valid travel documents and comply with Stena Line’s standard travel and check-in requirements.',
+  'Stena Line reserves the right to amend or withdraw the offer. Stena Line’s General Terms and Conditions of Carriage apply.',
+];
+const SALE = [
+  { id: 'short20', name: 'Short stay: 20% off', title: 'Short stay: 20% off return fares', code: 'SHORT20', from: '20% off return fares', valid: 'Travel until 31 Mar 2027', desc: 'Up to 4 nights in Holland on day or night sailings. Economy, Flexi and Premium fares, motorists and foot passengers.', img: S7 + 'AdobeStock_641410334_1' + TEASER, vehicle: 'Car' },
+  { id: 'caravan', name: 'Caravans go free', title: 'Caravans go free to Holland', code: 'CARAVAN0', from: 'Caravan supplement £0', valid: 'Selected departures', desc: 'Your caravan travels free on selected departures to Holland. Pack the whole holiday and let the ferry do the driving.', img: S7 + 'adobestock_662550435' + TEASER, vehicle: 'Car + caravan' },
+  { id: 'cabins50', name: '50% off day cabins', title: '50% off cabins on day sailings', code: 'CABIN50', from: 'Cabins half price', valid: 'Day sailings', desc: 'Arrive relaxed and refreshed: a luxurious en-suite cabin for half the price on daytime crossings.', img: S7 + '20220209_Stena_Hollandica_Britanica_Premium_Cabins_2' + TEASER, vehicle: 'Car' },
+  { id: 'autumn15', name: '15% off autumn trips', title: '15% off autumn getaways', code: 'AUTUMN15', from: '15% off fares', valid: 'Book by 31 Oct', desc: 'Ship out from Harwich to Hook of Holland for less this autumn and spend more on the memories.', img: S7 + '020925D_STENA_LINE_1466' + TEASER, vehicle: 'Car' },
+];
+const SALE_TC = [
+  'Discounts apply only to new Economy, Flexi and Premium bookings on the Harwich – Hook of Holland route.',
+  'Each deal is a separate offer and cannot be combined with other promotional offers, products or discounts, including Tesco Clubcard Partners codes.',
+  'Stena MORE loyalty points may be earned and redeemed with these products.',
+  'Non-web bookings are subject to a £10 telephone service fee. Discounts are not valid for freight or stock cars.',
+];
+const ONBOARD = [
+  { icon: 'Spa', title: 'Spa and sauna', text: 'Unwind in the sauna or jacuzzi with views across the Baltic Sea.' },
+  { icon: 'Bar', title: 'Bars and live music', text: 'Live music, bingo and the Nightclub on selected sailings.' },
+  { icon: 'KidsRoom', title: 'Four play areas', text: 'Kids’ entertainment during the summer season.' },
+  { icon: 'Cart', title: 'The Shop', text: 'Great-value treats, perfumes, gifts and travel essentials.' },
+];
+const BOOK = 'https://book.stenaline.pl/redirect?&routeOut=GDKA&routeHome=KAGD';
+const codeOf = (pid) => PRODUCTS.find((p) => p.id === pid).code;
+const toBooking = (url) => '#/booking?u=' + encodeURIComponent(url);
+const deepLink = (d) => toBooking(`${BOOK}&depDateOut=${d.out}&depDateHome=${d.home}&product=${codeOf(d.p)}`);
+const routeFor = (o) => o.tags.includes('Sale') ? '#/campaign/editorial-booking' : o.tags.includes('Theme cruise') || o.tags.includes('Day trip') ? '#/campaign/calendar' : '#/campaign/sale';
+OFFERS.forEach((o) => { o.href = routeFor(o); });
+const ROUTES = { '': ['start', 'Start'], 'listing': ['listing', '1a · Listing with filters'], 'finder': ['finder', '2c · Guided deal finder'], 'campaign/hub': ['hub', '1b · Cruise hub'], 'campaign/calendar': ['calendar', '2b · Sailing calendar'], 'campaign/sale': ['sale', '1c · Sale with deal selector'], 'campaign/editorial-booking': ['editorialBooking', '3a · Editorial, booking first'], 'campaign/editorial': ['editorial', '2a · Editorial with deal bar'], 'campaign/mobile': ['mobile', '1d · Mobile cruise hub'], 'booking': ['booking', 'Booking stub'] };
+const parseHash = () => { const h = location.hash.replace(/^#\/?/, ''); const [path, q = ''] = h.split('?'); const r = ROUTES[path] || ROUTES['']; return { page: r[0], name: r[1], query: new URLSearchParams(q) }; };
+const PRODUCT_NAMES = { CRUSKG1B: '24-hour cruise', CRUSKG2B: '36-hour cruise' };
+const ROUTE_NAMES = { GDKA: 'Gdynia', KAGD: 'Karlskrona', HWHH: 'Harwich', HHHW: 'Hook of Holland' };
+const SEL_BG = '#E5F0FB', SEL_RING = 'inset 0 0 0 2px #034592', IDLE_RING = 'inset 0 0 0 1px #C9C9C9';
+const ED_POINTS = {
+  short20: ['Up to 4 nights in Holland', 'Day or night sailings', 'Economy, Flexi and Premium fares', 'Motorists and foot passengers'],
+  caravan: ['Caravan supplement £0', 'Selected departures to Holland', 'Add the car and caravan as you book'],
+  cabins50: ['En-suite cabin at half price', 'Daytime crossings only', 'Added at the cabin step of booking'],
+  autumn15: ['15% off fares', 'Book by 31 Oct', 'Cars, motorhomes and foot passengers'],
+};
+const COMPARE = [
+  ['Fares', 'Economy · Flexi · Premium', 'Economy · Flexi', 'Any fare', 'Economy · Flexi · Premium'],
+  ['Travelling with', 'Car or on foot', 'Car + caravan', 'Car or on foot', 'Car, motorhome or on foot'],
+  ['Travel window', 'Until 31 Mar 2027', 'Selected departures', 'Day sailings', 'Book by 31 Oct'],
+  ['Offer code', 'SHORT20', 'CARAVAN0 *', 'CABIN50 *', 'AUTUMN15 *'],
+];
+const WHERE = [['all', 'Anywhere', 'FerryDepart'], ['Holland', 'Holland', 'Port'], ['Irish Sea', 'Ireland and Britain', 'Port']];
+const TRIP = [['any', 'Any kind of trip', 'ListTicketFare'], ['day', 'Day trip', 'Sun'], ['theme', 'Theme cruise', 'Cocktail'], ['short', 'Short stay', 'BunkBed1'], ['holiday', 'Longer holiday', 'Calendar']];
+const WITH = [['any', 'Not decided yet', 'HumanAdultWide'], ['car', 'By car', 'CarCarMedium'], ['caravan', 'Caravan or motorhome', 'CarCarMedium'], ['foot', 'On foot', 'VehicleFootPassenger']];
+const VEH = { 'caravan-irish-sea': 'caravan', 'motorhome-irish-sea': 'caravan', 'caravans-free-holland': 'caravan', 'motorhome-holland': 'caravan', 'short-stay-car': 'car' };
+const tripOk = (o, t) => t === 'any' || (t === 'day' && o.tags.includes('Day trip')) || (t === 'theme' && o.tags.includes('Theme cruise')) || (t === 'short' && ['short-stay-20', 'short-stay-car'].includes(o.id)) || (t === 'holiday' && o.tags.includes('Discount') && !o.tags.includes('Day trip'));
+const withOk = (o, w) => { const v = VEH[o.id] || 'any'; return w === 'any' || (w === 'caravan' ? v === 'caravan' : w === 'car' ? v !== 'caravan' : v === 'any'); };
+
+class Component extends DCLogic {
+  state = { filter: 'all', region: 0, product: '24h', dep: null, month: 'all', tc: false, mProduct: '24h', mDep: null, mMonth: 'all', mTc: false, sale: 'short20', saleTc: false, edDeal: 'short20', calProduct: 'all', calSel: '2026-11-20', cfgWhere: 'all', cfgTrip: 'any', cfgWith: 'any', route: parseHash() };
+  onHash = () => { this.setState({ route: parseHash() }); window.scrollTo(0, 0); };
+  componentDidMount() { window.addEventListener('hashchange', this.onHash); }
+  componentWillUnmount() { window.removeEventListener('hashchange', this.onHash); }
+  router() {
+    const r = this.state.route, pg = {};
+    Object.values(ROUTES).forEach(([k]) => { pg[k] = r.page === k; });
+    const url = r.query.get('u') || '';
+    let rows = [];
+    try {
+      const q = new URL(url).searchParams;
+      const g = (k) => q.get(k);
+      const fmt = (iso) => { if (!iso) return null; const d = new Date(iso + 'T00:00:00Z'); return ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][d.getUTCDay()] + ' ' + d.getUTCDate() + ' ' + ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][d.getUTCMonth()] + ' ' + d.getUTCFullYear(); };
+      rows = [
+        ['Route', g('routeOut') ? `${ROUTE_NAMES[g('routeOut')] || g('routeOut')} – ${ROUTE_NAMES[g('routeHome')] || g('routeHome')}` : null],
+        ['Product', g('product') ? `${PRODUCT_NAMES[g('product')] || g('product')} · code ${g('product')}` : null],
+        ['Offer code', g('offerCode')],
+        ['Outward date', fmt(g('depDateOut')) || 'Chosen in booking'],
+        ['Return date', fmt(g('depDateHome')) || 'Chosen in booking'],
+        ['Market', url.includes('stenaline.pl') ? 'Poland (book.stenaline.pl)' : 'UK (book.stenaline.co.uk)'],
+      ].filter(([, v]) => v).map(([label, value]) => ({ label, value }));
+    } catch (e) { rows = [{ label: 'Status', value: 'No booking parameters were passed.' }]; }
+    return { pg, proto: { show: r.page !== 'start', name: r.name }, bk: { rows, url: url || '—' }, goBack: () => history.back() };
+  }
+
+  explore() {
+    const s = this.state, set = (p) => this.setState(p);
+    const SEL = '#E5F0FB';
+    // 2a editorial
+    const edDeal = SALE.find((p) => p.id === s.edDeal);
+    const ed = {
+      index: SALE.map((p, i) => ({ num: '0' + (i + 1), name: p.name })),
+      tiles: SALE.map((p) => { const sel = p.id === s.edDeal; return { ...p, radio: sel ? 'yes' : 'no', bg: sel ? SEL : '#fff', ring: sel ? SEL_RING : IDLE_RING, onClick: () => set({ edDeal: p.id }) }; }),
+      name: edDeal.title, codeTag: `Code ${edDeal.code} applied`, valid: edDeal.valid,
+      searchHref: toBooking(`https://book.stenaline.co.uk/redirect?&routeOut=HWHH&routeHome=HHHW&offerCode=${edDeal.code}`),
+      chapters: SALE.map((p, i) => { const sel = p.id === s.edDeal; return { ...p, num: '0' + (i + 1), bg: i % 2 ? '#F4F4F4' : '#fff', imgOrder: i % 2 ? 2 : 0, imgBig: p.img.replace(TEASER, '?wid=1200'), points: ED_POINTS[p.id].map((text) => ({ text })), btnType: sel ? 'primary' : 'secondary', btnLabel: sel ? 'Your deal' : 'Choose this deal', onClick: () => set({ edDeal: p.id }) }; }),
+      compareHead: SALE.map((p) => ({ name: p.name, bg: p.id === s.edDeal ? SEL : '#F4F4F4' })),
+      compareRows: COMPARE.map(([label, ...cells]) => ({ label, cells: cells.map((text, i) => ({ text, bg: SALE[i].id === s.edDeal ? SEL : '#fff' })) })),
+      compareBtns: SALE.map((p) => { const sel = p.id === s.edDeal; return { bg: sel ? SEL : '#fff', btnType: sel ? 'primary' : 'secondary', btnLabel: sel ? 'Your deal' : 'Choose', onClick: () => set({ edDeal: p.id }) }; }),
+    };
+    // 2b calendar
+    const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const PRICE = { '24h': 441, '36h': 589 };
+    const allDeps = THEMES.flatMap((t) => t.deps.map((d) => ({ ...d, theme: t })));
+    const start = Date.UTC(2026, 9, 26), f = s.calProduct;
+    const cells = Array.from({ length: 42 }, (_, i) => {
+      const dt = new Date(start + i * 86400000), key = dt.toISOString().slice(0, 10);
+      const deps = allDeps.filter((d) => d.out === key), prods = [...new Set(deps.map((d) => d.p))];
+      const avail = deps.length > 0 && (f === 'all' || prods.includes(f)), sel = s.calSel === key;
+      const cruiseMin = deps.length ? Math.min(...deps.map((d) => PRICE[d.p])) : null;
+      const priceLine = !avail ? '' : f === 'all' ? `from ${cruiseMin} PLN` : `from ${PRICE[f]} PLN`;
+      return { key, num: dt.getUTCDate(), monthTag: i === 0 || dt.getUTCDate() === 1 ? MON[dt.getUTCMonth()] : '', hasTheme: deps.length > 0, theme: deps.length ? deps[0].theme.title : '', prods: prods.map((p) => ({ label: p })), priceLine,
+        bg: sel ? SEL : avail ? '#fff' : '#F4F4F4', ring: sel ? 'inset 0 0 0 2px #034592' : 'none', opacity: avail ? 1 : 0.55, numBg: i === 0 ? '#034592' : 'transparent', numColor: i === 0 ? '#fff' : '#1A1A1A', onClick: () => set({ calSel: key }) };
+    });
+    const selDt = new Date(s.calSel + 'T00:00:00Z'), selDeps = allDeps.filter((d) => d.out === s.calSel), theme = selDeps.length ? selDeps[0].theme : null;
+    const options = selDeps.map((d, i) => ({ name: PRODUCTS.find((p) => p.id === d.p).name, meta: `Back ${d.homeLabel} · cabin and meals included`, price: `from ${PRICE[d.p]} PLN`, href: deepLink(d), btnType: i === 0 ? 'primary' : 'secondary' }));
+    const cal = {
+      filters: [['all', 'All cruises'], ['24h', '24-hour cruises'], ['36h', '36-hour cruises']].map(([id, label]) => { const sel = f === id; return { id, label, bg: sel ? '#034592' : '#fff', fg: sel ? '#fff' : '#034592', ring: sel ? 'none' : 'inset 0 0 0 1px #034592', hoverBg: sel ? '#122F66' : SEL, onClick: () => set({ calProduct: id }) }; }),
+      cells,
+      sel: { img: theme ? theme.img : S7 + 'StenaLine_Web_3840x2160_EastAutumnSale?wid=800', dateLong: `${DAYS[selDt.getUTCDay()]} ${selDt.getUTCDate()} ${MON[selDt.getUTCMonth()]} 2026`, title: theme ? theme.title : 'No cruise on this date', desc: theme ? theme.desc : 'Pick a highlighted date to see the cruises you can book that day.', options },
+      products: PRODUCTS.map((p) => ({ name: p.name, from: p.from, included: p.included.map((text) => ({ text })) })),
+    };
+    // 2c guided finder
+    const cur = { cfgWhere: s.cfgWhere, cfgTrip: s.cfgTrip, cfgWith: s.cfgWith };
+    const match = (where, trip, w) => OFFERS.filter((o) => (where === 'all' || o.region === where) && tripOk(o, trip) && withOk(o, w));
+    const results = match(s.cfgWhere, s.cfgTrip, s.cfgWith);
+    const mkStep = (num, title, list, key, fn) => ({ num, title, options: list.map(([id, label, icon]) => { const sel = id === cur[key]; return { id, label, icon, count: fn(id).length, bg: sel ? SEL : '#fff', ring: sel ? 'inset 0 0 0 2px #034592' : 'inset 0 0 0 1px #C9C9C9', onClick: () => set({ [key]: id }) }; }) });
+    const picked = [[WHERE, s.cfgWhere], [TRIP, s.cfgTrip], [WITH, s.cfgWith]].filter(([, v]) => v !== 'all' && v !== 'any').map(([L, v]) => L.find((x) => x[0] === v)[1]);
+    const cfg = {
+      steps: [mkStep('1', 'Where to?', WHERE, 'cfgWhere', (id) => match(id, s.cfgTrip, s.cfgWith)), mkStep('2', 'What kind of trip?', TRIP, 'cfgTrip', (id) => match(s.cfgWhere, id, s.cfgWith)), mkStep('3', 'Travelling with?', WITH, 'cfgWith', (id) => match(s.cfgWhere, s.cfgTrip, id))],
+      summary: `${results.length} deal${results.length === 1 ? '' : 's'}${picked.length ? ' · ' + picked.join(' · ') : ' across all routes'}`,
+      reset: () => set({ cfgWhere: 'all', cfgTrip: 'any', cfgWith: 'any' }),
+      hasBest: results.length > 0, best: results.length ? { ...results[0], cat: results[0].tags[0] } : {}, rest: results.slice(1).map((o) => ({ ...o, cat: o.tags[0] })), empty: results.length === 0,
+    };
+    return { ed, cal, cfg };
+  }
+
+  hub(pk, dk, mk, tk) {
+    const s = this.state, set = (p) => this.setState(p);
+    const pid = s[pk], cur = s[dk], month = s[mk], tcOpen = s[tk];
+    const prod = PRODUCTS.find((p) => p.id === pid);
+    const products = PRODUCTS.map((p) => { const sel = p.id === pid; return { ...p, radio: sel ? 'yes' : 'no', bg: sel ? SEL_BG : '#fff', ring: sel ? SEL_RING : IDLE_RING, onClick: () => set({ [pk]: p.id, [dk]: null }) }; });
+    const months = MONTHS.map(([id, label]) => ({ id, label, bg: id === month ? '#CAE2FB' : 'transparent', onClick: () => set({ [mk]: id }) }));
+    const themes = THEMES.filter((t) => month === 'all' || t.deps.some((d) => d.m === month)).map((t) => {
+      const deps = t.deps.filter((d) => month === 'all' || d.m === month);
+      const multi = new Set(t.deps.map((d) => d.p)).size > 1;
+      const chips = deps.map((d) => {
+        const sel = !!cur && cur.id === d.id, match = d.p === pid;
+        return { ...d, label: multi ? `${d.label} · ${d.p}` : d.label, bg: sel ? '#CAE2FB' : '#fff', fg: sel ? '#1A1A1A' : '#034592', opacity: sel || match ? 1 : 0.45, href: deepLink(d),
+          onClick: (e) => { e.preventDefault(); set({ [dk]: d, [pk]: d.p }); } };
+      });
+      const first = deps.find((d) => d.p === pid) || deps[0];
+      return { ...t, chips, variants: multi ? '24h · 36h' : deps[0].p + ' cruise', bookHref: deepLink(first), bookLabel: deps.length > 1 ? 'Book a departure' : 'Book now' };
+    });
+    const theme = cur ? THEMES.find((t) => t.deps.some((d) => d.id === cur.id)) : null;
+    const outText = cur ? cur.label : prod.fixed ? 'Choose a departure' : 'Select date';
+    const homeText = cur ? cur.homeLabel : prod.fixed ? '—' : 'Select date';
+    const hint = cur ? `Search opens booking with these dates and the ${prod.name} product.` : prod.fixed ? 'Fixed departure dates. Pick one from the themed sailings below.' : 'Any sailing date. Choose your own dates.';
+    const tagType = cur ? 'success' : 'default', tagText = cur ? `${theme.title} · ${cur.label}` : prod.name;
+    return {
+      products, months, themes, outText, homeText, hint, tagType, tagText,
+      note: `Booking opens with the ${prod.name} pre-selected.`,
+      searchHref: cur ? deepLink(cur) : toBooking(`${BOOK}&product=${prod.code}`),
+      includedTitle: `What's included in your ${prod.name.toLowerCase()}`,
+      included: prod.included.map((text) => ({ text })),
+      pricesTitle: `Prices · ${prod.name}`,
+      prices: prod.prices.map(([label, price]) => ({ label, price })),
+      tc: (tcOpen ? TC : TC.slice(0, 2)).map((text) => ({ text })),
+      tcLabel: tcOpen ? 'Show fewer terms' : `Show all ${TC.length} terms`,
+      tcToggle: () => set({ [tk]: !tcOpen }),
+    };
+  }
+
+  renderVals() {
+    const s = this.state, set = (p) => this.setState(p);
+    const region = REGIONS[s.region];
+    const byRegion = OFFERS.filter((o) => region === 'All routes' || o.region === region);
+    const filters = FILTERS.map(([id, label]) => {
+      const sel = s.filter === id;
+      return { id, label, count: id === 'all' ? byRegion.length : byRegion.filter((o) => o.tags.includes(id)).length,
+        bg: sel ? '#034592' : '#fff', fg: sel ? '#fff' : '#034592', ring: sel ? 'none' : 'inset 0 0 0 1px #034592', hoverBg: sel ? '#122F66' : '#E5F0FB', onClick: () => set({ filter: id }) };
+    });
+    const offers = byRegion.filter((o) => s.filter === 'all' || o.tags.includes(s.filter)).map((o) => ({ ...o, cat: o.tags[0], ending: !!o.ending }));
+    const offerCount = `${offers.length} offer${offers.length === 1 ? '' : 's'}${region === 'All routes' ? '' : ' · ' + region}`;
+
+    const saleProd = SALE.find((p) => p.id === s.sale);
+    const sale = {
+      tiles: SALE.map((p) => { const sel = p.id === s.sale; return { ...p, radio: sel ? 'yes' : 'no', bg: sel ? SEL_BG : '#fff', ring: sel ? SEL_RING : IDLE_RING, onClick: () => set({ sale: p.id }) }; }),
+      cards: SALE.map((p) => { const sel = p.id === s.sale; return { ...p, cardRing: sel ? SEL_RING : 'inset 0 0 0 1px #EBEBEB', btnType: sel ? 'primary' : 'secondary', btnLabel: sel ? 'Selected' : 'Book this deal', onClick: () => set({ sale: p.id }) }; }),
+      codeTag: `Offer code ${saleProd.code} applied`,
+      hint: `${saleProd.name} · ${saleProd.valid}`,
+      vehicle: saleProd.vehicle,
+      searchHref: toBooking(`https://book.stenaline.co.uk/redirect?&routeOut=HWHH&routeHome=HHHW&offerCode=${saleProd.code}`),
+      tc: (s.saleTc ? SALE_TC : SALE_TC.slice(0, 2)).map((text) => ({ text })),
+      tcLabel: s.saleTc ? 'Show fewer terms' : `Show all ${SALE_TC.length} terms`,
+      tcToggle: () => set({ saleTc: !s.saleTc }),
+    };
+    const moreOffers = ['caravan-irish-sea', 'festive-family', 'duty-free-10'].map((id) => OFFERS.find((o) => o.id === id)).map((o) => ({ ...o, cat: o.tags[0] }));
+
+    return {
+      filters, offers, offerCount, regionText: region, cycleRegion: () => set({ region: (s.region + 1) % REGIONS.length }),
+      h: this.hub('product', 'dep', 'month', 'tc'),
+      m: this.hub('mProduct', 'mDep', 'mMonth', 'mTc'),
+      sale, moreOffers, onboard: ONBOARD, ...this.explore(), ...this.router(),
+      fill: { style: { position: 'absolute', inset: 0, height: '100%', aspectRatio: 'auto' } },
+      nbsp: '\u00A0', fRoute: { style: { width: 370, height: 72, justifyContent: 'center' } }, fDates: { style: { width: 470, height: 72 } }, wGrow: { style: { flex: 1 } }, w200: { style: { width: 200 } }, w260: { style: { width: 260 } }, w311: { style: { width: 311 } }, w330: { style: { width: 330 } }, footerGroups: ['Help & Contact', 'About Us', 'Travel Options', 'Partners', 'Legal'].map((label) => ({ label })), wFull: { style: { width: '100%' } },
+    };
+  }
+}
+</script>
+</body>
+</html>
