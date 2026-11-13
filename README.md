@@ -1,13 +1,13 @@
 # Special offers · clickable prototype
 
-Stena Line special offers redesign: a clickable prototype that shows eight options for the special offers pages, plus the design brief behind them. Built in [Claude Design](https://claude.ai/design) and exported as static files. This repo serves that export on GitHub Pages.
+Stena Line special offers redesign: a clickable prototype that shows seven options for the special offers listing and campaign pages plus a partner package page, each as a desktop page and as a mobile page, and the design brief behind the first seven. Built in [Claude Design](https://claude.ai/design) and exported as static files. This repo serves that export on GitHub Pages.
 
 - **Prototype:** https://filipgsonwfh.github.io/special-offers-poc/
 - **Design brief:** https://filipgsonwfh.github.io/special-offers-poc/design-brief.html
 
 ## The options
 
-The start page is "Pick a variant". Each variant opens as a working page: listing cards lead into the campaign pages, breadcrumbs lead back, and every "Search trip" or "Book" button lands on a booking stub that shows what would be handed to the booking flow.
+The start page is "Pick a variant". Each variant opens as a working page, on desktop or in a phone frame: listing cards lead into the campaign and package pages, breadcrumbs lead back, and every "Search trip" or "Book" button lands on a booking stub that shows what would be handed to the booking flow.
 
 | ID | Variant | Deep link | What it tries |
 |----|---------|-----------|---------------|
@@ -18,9 +18,14 @@ The start page is "Pick a variant". Each variant opens as a working page: listin
 | 1c | Sale with deal selector | [`#/campaign/sale`](https://filipgsonwfh.github.io/special-offers-poc/#/campaign/sale) | A sale with four offer codes. The selected deal's code is applied automatically. |
 | 3a | Editorial, booking first | [`#/campaign/editorial-booking`](https://filipgsonwfh.github.io/special-offers-poc/#/campaign/editorial-booking) | The sale as a long read with the booking panel in the hero and one chapter per deal. |
 | 2a | Editorial with deal bar | [`#/campaign/editorial`](https://filipgsonwfh.github.io/special-offers-poc/#/campaign/editorial) | The long read with a sticky deal bar instead; booking panel at the end. |
-| 1d | Mobile cruise hub | [`#/campaign/mobile`](https://filipgsonwfh.github.io/special-offers-poc/#/campaign/mobile) | The cruise hub at 375px, shown in a phone-width frame. |
+| 4a | Partner package, one offer per page | [`#/package/legoland`](https://filipgsonwfh.github.io/special-offers-poc/#/package/legoland) | Ferry, hotel, tickets and dinner at one price, with the partner (LEGOLAND®, Liseberg) as the headline and Stena Line and Sembo side by side as sellers. Opens on the LEGOLAND® package; the other packages are linked from the bottom of the page. |
+| 4a | Same template, Liseberg as partner | [`#/package/liseberg`](https://filipgsonwfh.github.io/special-offers-poc/#/package/liseberg) | Two days at Liseberg, two nights at Gothia Towers across the street and a spa package, from Frederikshavn. |
 
-Descriptions are the start-page card copy. Two fixtures carry the campaign pages: **Cruises to Sweden** (Gdynia – Karlskrona, 24h and 36h cruise products, Polish market) for 1b, 2b and 1d, and **Winter Sale** (Harwich – Hook of Holland, four offer codes, UK market) for 1c, 3a and 2a. The listing pages (1a, 2c) work on 21 offers across Holland and the Irish Sea.
+Descriptions are the start-page card copy.
+
+**Desktop and mobile views.** Every variant has both. The start page opens either one, and the black prototype bar on each page switches between them. Add `?view=desktop` or `?view=mobile` to a deep link to pick one, for example [`#/package/legoland?view=mobile`](https://filipgsonwfh.github.io/special-offers-poc/#/package/legoland?view=mobile). On a desktop screen the mobile view sits in a 390px phone frame. On a screen narrower than 760px every page switches to its mobile layout by itself, without the frame. The former 1d link, `#/campaign/mobile`, still works and opens the cruise hub in the mobile view.
+
+Three fixtures carry the pages: **Cruises to Sweden** (Gdynia – Karlskrona, 24h and 36h cruise products, Polish market) for 1b and 2b, **Winter Sale** (Harwich – Hook of Holland, four offer codes, UK market) for 1c, 3a and 2a, and four **partner packages** for 4a: LEGOLAND® Billund Resort and Fårup Sommerland from Gothenburg, Liseberg from Frederikshavn and Efteling from Harwich (Swedish, Danish and UK markets). A package page has departure chips, two or three nights and a traveller stepper, and the price and the day-by-day plan follow the choices. The listing pages (1a, 2c) work on 23 offers across Holland, the Irish Sea and Scandinavia, including the LEGOLAND® and Liseberg packages.
 
 ## The brief, in short
 
@@ -28,14 +33,14 @@ Descriptions are the start-page card copy. Two fixtures carry the campaign pages
 - **Proposal:** one **campaign page** holds any number of bookable products. The booking panel gets a product selector and the selected product's code goes to booking. Fixed-date sailings are **departures** that deep-link into booking with product and dates. Modules (what's included, prices, terms) vary per product. The listing merges Day trips as a filter.
 - **Decisions:** radio tiles for up to four products, a dropdown beyond that. Both booking paths: the widget for open-date offers, deep links for fixed dates. Desktop first, one mobile view (1d). Codes marked * and the 36h prices are placeholders.
 
-The full brief with annotated page renders is in `design-brief.html`.
+The full brief with annotated page renders is in `design-brief.html`. It covers the options up to 3a. The partner packages (4a) and the mobile view of every page came after it and are only in the prototype.
 
 ## How it works
 
 - `index.html` and `design-brief.html` are Claude Design documents: HTML templates with `{{ }}` bindings and a small logic script, rendered in the browser by `support.js` (the Claude Design runtime) on React 18. No build step.
 - `vendor/` holds the React 18.3.1 UMD files the runtime would otherwise fetch from unpkg. They are loaded before the runtime, so the site has no CDN dependency for scripts. Their SHA-384 hashes match the ones pinned in `support.js`.
 - `_ds/` is the Stena Line design system export the pages use: tokens (colours, type scale, spacing, radii) and the prebuilt component bundle (header, footer, buttons, tags, Find & Book fields, icons). Unmodified.
-- Photos load from Stena Line's Scene7 CDN. Figtree from Google Fonts stands in for Stena Sans, which is not shipped.
+- Photos load from Stena Line's Scene7 CDN, except the LEGOLAND® hero, which is a file in `assets/`. Figtree from Google Fonts stands in for Stena Sans, which is not shipped.
 - Routing is hash based, so deep links such as `/#/campaign/sale` work on GitHub Pages.
 
 ## Run locally
@@ -50,20 +55,20 @@ Serve it over HTTP rather than opening the file directly.
 ## Repo layout
 
 ```
-index.html          the clickable prototype (start page + 8 variants + booking stub)
-design-brief.html   the design brief with annotated renders of every variant
+index.html          the clickable prototype (start page, 7 listing and campaign variants, partner packages, booking stub; desktop and mobile views)
+design-brief.html   the design brief with annotated renders of the variants up to 3a
 support.js          Claude Design runtime
 vendor/             React 18.3.1 UMD
 _ds/                Stena Line design system: tokens and the prebuilt component bundle
-assets/             Stena Line logos used by the mobile variant
+assets/             Stena Line logos and the LEGOLAND® hero photo
 .nojekyll           keeps GitHub Pages from ignoring the _ds folder
 ```
 
 ## Notes and limitations
 
 - This is a prototype, not production code. Styling is inline in the templates and components come from the prebuilt bundle.
-- The booking stub books nothing. It shows the URL that would be handed to `book.stenaline.co.uk` or `book.stenaline.pl`.
-- Offer codes, prices and dates are illustrative. The brief marks which ones are placeholders.
+- The booking stub books nothing. It shows the URL that would be handed to `book.stenaline.co.uk`, `book.stenaline.pl`, `book.stenaline.se` or `book.stenaline.dk`.
+- Offer codes, prices and dates are illustrative, the partner packages included. The brief marks which ones are placeholders in the options it covers.
 - The design system stylesheets reference a few card thumbnails that are not part of the export. They 404 in the console and nothing visible depends on them.
-- Changes made to the Claude Design export for this repo: files renamed, `<title>` and favicon added, React vendored, embedded provenance metadata stripped from the two logo SVGs, a "Design brief" link added to the start page and a link back from the brief, and the bottom booking panel from the brief's 2a page ported into the prototype's 2a page (the start card describes it, the export lacked it), and the design-system footer centred with an edge-to-edge blue band on screens wider than 1440px (it is a fixed-width frame in the export).
-- Source: export of the Claude Design project "Stena Line special offers redesign", 26 October 2026. Pasted reference screenshots and an unrelated "Stena Line BE" page from the same export are not included.
+- Changes made to the Claude Design export for this repo: files renamed, `<title>` and favicon added, React vendored, embedded provenance metadata stripped from the three logo SVGs, a "Design brief" link added to the start page header (at desktop widths only; the phone header is left as designed) and a link back from the brief, the bottom booking panel from the brief's 2a page ported into the prototype's 2a desktop page (the start card describes it, the export lacked it), and the design-system footer centred with an edge-to-edge blue band on screens wider than 1440px (it is a fixed-width frame in the export). Everything else in `index.html` is the export as is.
+- Source: export of the Claude Design project "Stena Line special offers redesign", 13 November 2026 (first published from the 26 October 2026 export). Pasted reference screenshots, images the pages do not use and an unrelated "Stena Line BE" page from the same export are not included.
